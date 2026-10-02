@@ -1,0 +1,908 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex"><title>Unplugged — A 90-Day System to Quit Pornography | The Bravo</title><meta name="description" content="Unplugged is a practical 90-day system for breaking the cycle of pornography and compulsive masturbation."><meta property="og:title" content="Unplugged — Quit Pornography">
+<meta property="og:description" content="A practical 90-day system for breaking the cycle of pornography and compulsive masturbation.">
+<meta property="og:type" content="website"><meta name="theme-color" content="#141414"><style>
+:root{
+  --bg:#141414;
+  --panel:#1c1c1c;
+  --panel2:#222;
+  --gold:#C49A4A;
+  --gold2:#d9b469;
+  --text:#ECE8DF;
+  --muted:#A8A296;
+  --line:#2e2b25;
+  --serif:Georgia,"Times New Roman",serif;
+  --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  --mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+}
+
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *{transition:none!important}
+}
+
+body{
+  background:var(--bg);
+  color:var(--text);
+  font-family:var(--sans);
+  font-size:17px;
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+  padding-bottom:40px;
+  background-image:
+    radial-gradient(
+      ellipse at 50% -10%,
+      rgba(196,154,74,.10),
+      transparent 55%
+    );
+}
+
+.wrap{
+  max-width:680px;
+  margin:0 auto;
+  padding:0 20px;
+}
+
+section{
+  padding:52px 0;
+  border-top:1px solid var(--line);
+}
+
+.top{
+  padding:16px 0;
+  text-align:center;
+  font:12px var(--mono);
+  letter-spacing:.3em;
+  color:var(--gold);
+}
+
+.label{
+  font:12px var(--mono);
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  color:var(--gold);
+  margin-bottom:14px;
+}
+
+h1,h2,h3{
+  font-family:var(--serif);
+  font-weight:700;
+  line-height:1.18;
+  color:var(--text);
+}
+
+h1{
+  font-size:clamp(34px,8.5vw,50px);
+  letter-spacing:-.01em;
+}
+
+h2{
+  font-size:clamp(27px,7vw,37px);
+  margin-bottom:18px;
+}
+
+h3{
+  font-size:20px;
+  margin-bottom:7px;
+}
+
+p{
+  margin-bottom:16px;
+}
+
+.muted{
+  color:var(--muted);
+}
+
+strong,b{
+  color:#fff;
+}
+
+.gold{
+  color:var(--gold);
+}
+
+
+/* BUTTONS
+   ONLY TWO PURCHASE BUTTONS EXIST IN THIS PAGE.
+*/
+
+.purchase-btn{
+  display:block;
+  width:100%;
+  text-align:center;
+  background:var(--gold);
+  color:#141414;
+  font-weight:800;
+  font-size:18px;
+  padding:17px 20px;
+  border-radius:6px;
+  text-decoration:none;
+  border:0;
+  box-shadow:0 6px 24px rgba(196,154,74,.22);
+  transition:background .15s;
+}
+
+.purchase-btn:hover,
+.purchase-btn:focus{
+  background:var(--gold2);
+}
+
+.micro{
+  font:12px var(--mono);
+  color:var(--muted);
+  text-align:center;
+  margin-top:11px;
+}
+
+
+/* HERO */
+
+.hero{
+  padding:38px 0 56px;
+  text-align:center;
+  border-top:0;
+}
+
+.hero .sub{
+  font-size:19px;
+  color:#d6d1c6;
+  margin:20px 0 28px;
+}
+
+.trust{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px 18px;
+  justify-content:center;
+  margin-top:18px;
+  font-size:13px;
+  color:var(--muted);
+}
+
+.trust span:before{
+  content:"▪ ";
+  color:var(--gold);
+}
+
+
+/* MIRROR */
+
+.mirror p{
+  font:21px/1.4 var(--serif);
+  border-left:2px solid var(--gold);
+  padding-left:16px;
+  margin-bottom:17px;
+}
+
+.pivot{
+  font:26px/1.25 var(--serif);
+  margin-top:28px;
+  color:#fff;
+}
+
+.pivot em{
+  font-style:normal;
+  color:var(--gold);
+}
+
+
+/* LOOP */
+
+.loop{
+  list-style:none;
+  margin:25px 0;
+}
+
+.loop li{
+  background:var(--panel);
+  border:1px solid var(--line);
+  border-radius:7px;
+  padding:15px 17px;
+  position:relative;
+  margin-bottom:22px;
+}
+
+.loop li:not(:last-child):after{
+  content:"↓";
+  position:absolute;
+  left:50%;
+  bottom:-24px;
+  transform:translateX(-50%);
+  color:var(--gold);
+  font-size:18px;
+}
+
+.loop b{
+  display:block;
+  font:12px var(--mono);
+  letter-spacing:.12em;
+  color:var(--gold);
+  margin-bottom:3px;
+}
+
+.loop span{
+  display:block;
+  color:#cfc9bc;
+  font-size:15px;
+}
+
+.note{
+  background:var(--panel);
+  border:1px solid var(--line);
+  border-left:3px solid var(--gold);
+  padding:16px 18px;
+  border-radius:5px;
+  margin:22px 0;
+}
+
+
+/* PHASES */
+
+.phase{
+  background:var(--panel);
+  border:1px solid var(--line);
+  border-radius:8px;
+  padding:21px 19px;
+  margin-bottom:13px;
+}
+
+.phase .days{
+  font:12px var(--mono);
+  letter-spacing:.14em;
+  color:var(--gold);
+}
+
+.phase h3{
+  font-size:27px;
+  margin:5px 0 7px;
+}
+
+.phase ul{
+  margin:9px 0 0 18px;
+  color:#cfc9bc;
+  font-size:15px;
+}
+
+.phase li{
+  margin-bottom:4px;
+}
+
+
+/* CONTENT GRID */
+
+.grid{
+  display:grid;
+  gap:11px;
+  margin-top:21px;
+}
+
+.item{
+  background:var(--panel);
+  border:1px solid var(--line);
+  border-radius:7px;
+  padding:16px 17px;
+}
+
+.item h3{
+  font-size:18px;
+  color:var(--gold2);
+}
+
+.item p{
+  margin:0;
+  color:#cfc9bc;
+  font-size:15px;
+}
+
+
+/* EMERGENCY CARD */
+
+.card{
+  background:#101010;
+  border:1px solid var(--gold);
+  border-radius:6px;
+  padding:21px 19px;
+  font:14px/1.9 var(--mono);
+  margin:20px 0;
+  box-shadow:0 0 0 4px rgba(196,154,74,.05);
+}
+
+.card .t{
+  color:var(--gold);
+  letter-spacing:.17em;
+  margin-bottom:8px;
+  font-size:12px;
+}
+
+.card b{
+  color:var(--gold2);
+}
+
+
+/* CHECKLIST */
+
+.ticks{
+  list-style:none;
+  margin:15px 0 20px;
+}
+
+.ticks li{
+  position:relative;
+  padding-left:28px;
+  margin-bottom:11px;
+}
+
+.ticks li:before{
+  content:"✓";
+  position:absolute;
+  left:0;
+  color:var(--gold);
+  font-weight:700;
+}
+
+.nos li:before{
+  content:"✕";
+  color:#b0554a;
+}
+
+
+/* TWO COLUMNS */
+
+.cols{
+  display:grid;
+  gap:12px;
+}
+
+.col{
+  background:var(--panel);
+  border:1px solid var(--line);
+  border-radius:8px;
+  padding:19px;
+}
+
+
+/* EVIDENCE */
+
+.evidence{
+  background:var(--panel);
+  border:1px solid var(--line);
+  border-radius:7px;
+  padding:18px;
+  margin-top:20px;
+}
+
+.evidence-row{
+  display:flex;
+  justify-content:space-between;
+  gap:20px;
+  padding:9px 0;
+  border-bottom:1px solid var(--line);
+  font-size:14px;
+}
+
+.evidence-row:last-child{
+  border-bottom:0;
+}
+
+.evidence-row span:last-child{
+  color:var(--gold);
+  font-family:var(--mono);
+  font-size:12px;
+}
+
+
+/* PRICE */
+
+.price{
+  text-align:center;
+}
+
+.price .amt{
+  font:64px/1 var(--serif);
+  color:var(--gold);
+  margin:7px 0 5px;
+}
+
+
+/* FAQ */
+
+details{
+  background:var(--panel);
+  border:1px solid var(--line);
+  border-radius:6px;
+  margin-bottom:9px;
+}
+
+summary{
+  cursor:pointer;
+  padding:15px 17px;
+  font-weight:700;
+  color:#fff;
+  list-style:none;
+  position:relative;
+  padding-right:40px;
+}
+
+summary::-webkit-details-marker{
+  display:none;
+}
+
+summary:after{
+  content:"+";
+  position:absolute;
+  right:17px;
+  top:10px;
+  color:var(--gold);
+  font-size:22px;
+}
+
+details[open] summary:after{
+  content:"–";
+}
+
+details p{
+  padding:0 17px 15px;
+  margin:0;
+  color:#cfc9bc;
+  font-size:15px;
+}
+
+
+/* FINAL */
+
+.final{
+  text-align:center;
+}
+
+.final h2{
+  font-size:clamp(29px,7vw,40px);
+}
+
+
+/* FOOTER */
+
+footer{
+  border-top:1px solid var(--line);
+  padding:32px 0;
+  text-align:center;
+  font-size:13px;
+  color:var(--muted);
+}
+
+footer .mark{
+  font:13px var(--mono);
+  letter-spacing:.25em;
+  color:var(--gold);
+  margin-bottom:10px;
+}
+
+
+/* DESKTOP */
+
+@media(min-width:720px){
+
+  .grid{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .cols{
+    grid-template-columns:1fr 1fr;
+  }
+
+  body{
+    font-size:18px;
+  }
+
+}
+</style></head><body><div class="top">THE BRAVO 🔱</div><!-- =========================================================
+     BUTTON 1 — HERO
+     ========================================================= --><header class="hero">
+<div class="wrap"><div class="label">
+A 90-Day System · Detox · Rebuild · Thrive
+</div><h1>
+Quitting pornography isn't a willpower problem.<br>
+It's a loop with no exit.
+</h1><p class="sub">
+Unplugged gives you a practical system to break the cycle of pornography and compulsive masturbation — understand the loop, cut the triggers, handle urges and rebuild your life.
+</p><a
+class="purchase-btn"
+href="https://thebrav0.gumroad.com/l/Unplugged"
+
+«»
+
+Get Unplugged — $9.99
+</a>
+
+<div class="micro">
+Instant download · One-time payment · Private
+</div><div class="trust">
+<span>50-page guide</span>
+<span>90-day system</span>
+<span>Works on your phone</span>
+</div></div>
+</header><!-- MIRROR --><section class="mirror">
+<div class="wrap"><div class="label">
+Sound familiar?
+</div><p>
+You told yourself it was the last time.
+</p><p>
+You deleted everything. Then you found a way back in.
+</p><p>
+You promised yourself you'd stop. Then the same situation showed up again.
+</p><p>
+The shame didn't break the pattern. It became part of it.
+</p><p>
+Your time, focus and self-trust keep paying the bill.
+</p><div class="pivot">
+You don't need another promise.<br>
+<em>You need a system.</em>
+</div></div>
+</section><!-- THE LOOP --><section>
+<div class="wrap"><div class="label">
+Why it keeps happening
+</div><h2>
+Every loop has an entry point.
+</h2><p class="muted">
+Most men wait until the urge is at its strongest. Unplugged teaches you to recognize and interrupt the circuit earlier.
+</p><ol class="loop"><li>
+<b>01 · TRIGGER</b>
+<span>
+Stress, boredom, loneliness, rejection, nighttime or a digital cue.
+</span>
+</li><li>
+<b>02 · ACCESS</b>
+<span>
+Privacy, devices and easy pathways to the behavior.
+</span>
+</li><li>
+<b>03 · URGE</b>
+<span>
+The pull to act. An urge is an experience, not an instruction.
+</span>
+</li><li>
+<b>04 · ACT</b>
+<span>
+The behavior itself.
+</span>
+</li><li>
+<b>05 · AFTERMATH</b>
+<span>
+Relief, regret, lost time and conditions for the next loop.
+</span>
+</li></ol><div class="note">
+<strong>The earlier you intervene, the cheaper the intervention.</strong>
+Unplugged is built around that principle.
+</div></div>
+</section><!-- 90-DAY SYSTEM --><section>
+<div class="wrap"><div class="label">
+The system
+</div><h2>
+90 days. Three phases. One standard.
+</h2><p class="muted">
+The goal isn't to chase a perfect streak. The goal is to build a system you can operate when motivation disappears.
+</p><div class="phase"><div class="days">
+DAYS 1–30
+</div><h3>
+DETOX
+</h3><p>
+Interrupt the old pattern before you depend on willpower.
+</p><ul>
+<li>Map your triggers and first compromises</li>
+<li>Protect your danger hours</li>
+<li>Clean up your digital environment</li>
+<li>Build your first non-negotiable rules</li>
+</ul></div><div class="phase"><div class="days">
+DAYS 31–60
+</div><h3>
+REBUILD
+</h3><p>
+Replace what the habit was doing for you.
+</p><ul>
+<li>Match triggers with real replacements</li>
+<li>Build stronger mornings and evenings</li>
+<li>Put connection where isolation used to win</li>
+<li>Practice the system on difficult days</li>
+</ul></div><div class="phase"><div class="days">
+DAYS 61–90
+</div><h3>
+THRIVE
+</h3><p>
+Turn recovery into a standard you can keep.
+</p><ul>
+<li>Put your attention into meaningful work</li>
+<li>Strengthen relationships and purpose</li>
+<li>Write the rules that remain after Day 90</li>
+<li>Build your Day 91 Plan</li>
+</ul></div><p class="muted">
+Every phase ends with a Phase Gate. If you're not ready, you repeat the weak part. Repeating a phase is maintenance, not failure.
+</p></div>
+</section><!-- WHAT'S INSIDE --><section>
+<div class="wrap"><div class="label">
+What's inside
+</div><h2>
+A full system, not a pep talk.
+</h2><div class="grid"><div class="item">
+<h3>30-Minute Day 1 Setup</h3>
+<p>
+Clean up your digital environment, reduce access and establish your first barriers.
+</p>
+</div><div class="item">
+<h3>6-Step Urge Protocol</h3>
+<p>
+Notice. Name. Distance. Delay. Redirect. Review. A simple process for the first minute of an urge.
+</p>
+</div><div class="item">
+<h3>The Bypass Protocol</h3>
+<p>
+What to do when your mind starts looking for a way around the rules.
+</p>
+</div><div class="item">
+<h3>11 High-Risk Situations</h3>
+<p>
+Plans for insomnia, rejection, anger, loneliness, failure, travel, long weekends and more.
+</p>
+</div><div class="item">
+<h3>Floor Day</h3>
+<p>
+The minimum version of the system you keep when life gets messy.
+</p>
+</div><div class="item">
+<h3>The 24-Hour Return</h3>
+<p>
+A recovery sequence for repairing the weak point and getting back into structure.
+</p>
+</div><div class="item">
+<h3>13-Week Roadmap</h3>
+<p>
+Every week has a goal, habit, action, measurement and fallback.
+</p>
+</div><div class="item">
+<h3>The Field Kit</h3>
+<p>
+Emergency Card, Trigger Map, If-Then Plans, Replacement Menu and Weekly Review.
+</p>
+</div><div class="item">
+<h3>90-Day Tracker + Scorecard</h3>
+<p>
+Daily checks and weekly reviews that show whether your system is actually working.
+</p>
+</div><div class="item">
+<h3>Day 91 Plan</h3>
+<p>
+Turn the system into a standard that continues after the guide ends.
+</p>
+</div></div></div>
+</section><!-- SAMPLE PAGE --><section>
+<div class="wrap"><div class="label">
+A page from the guide
+</div><h2>
+The Emergency Card.
+</h2><p class="muted">
+Built to be screenshotted and kept on your phone for the moment you need it.
+</p><div class="card"><div class="t">
+EMERGENCY CARD
+</div><b>NOTICE.</b> Catch the urge.<br>
+
+<b>NAME.</b> This is an urge, not an instruction.<br>
+
+<b>DISTANCE.</b> Put the device down and leave the private space.<br>
+
+<b>DELAY.</b> I do not decide right now.<br>
+
+<b>REDIRECT.</b> Use the replacement that fits the need.<br>
+
+<b>REVIEW.</b> Learn what triggered it.<br><br>
+
+If I search for a workaround, I stop and run the protocol.<br>
+
+If I slip, I run the 24-Hour Return.
+
+</div></div>
+</section><!-- OUTCOMES --><section>
+<div class="wrap"><div class="label">
+What changes
+</div><h2>
+Built to give you control back in practice.
+</h2><ul class="ticks"><li>
+You know your triggers and first compromises.
+</li><li>
+You know what to do when an urge hits.
+</li><li>
+Your digital environment has stronger barriers.
+</li><li>
+You have a recovery plan instead of a shame spiral.
+</li><li>
+Your nights have structure and your days have direction.
+</li><li>
+Your attention starts going somewhere useful.
+</li><li>
+You have a standard that continues beyond Day 90.
+</li></ul><p class="muted">
+No guarantees. Results depend on what you do with the system.
+</p></div>
+</section><!-- WHO IT'S FOR --><section>
+<div class="wrap"><div class="label">
+Read this before you buy
+</div><h2>
+Who this is for. Who it isn't.
+</h2><div class="cols"><div class="col"><h3 class="gold">
+This is for you if
+</h3><ul class="ticks"><li>
+You've tried to quit and the same pattern keeps returning.
+</li><li>
+You want a private, self-guided plan instead of another lecture.
+</li><li>
+You're willing to change your environment and follow the system.
+</li><li>
+You want a practical standard you can build around.
+</li></ul></div><div class="col"><h3 style="color:#c97d72">
+This isn't for you if
+</h3><ul class="ticks nos"><li>
+You want a magic reset or guaranteed timeline.
+</li><li>
+You want to be shamed into changing.
+</li><li>
+You expect the guide to do the work for you.
+</li><li>
+You need immediate professional support.
+</li></ul></div></div></div>
+</section><!-- STRAIGHT TALK --><section>
+<div class="wrap"><div class="label">
+Straight talk
+</div><h2>
+No brain-reset myths. No fake promises.
+</h2><p>
+Unplugged is built around habit, context, environmental design and practical behavior-change tools.
+</p><p>
+It does not promise a specific "brain reset" date, a guaranteed timeline or a perfect streak.
+</p><p>
+The guide includes an evidence chapter with cited sources and distinguishes stronger evidence from practical tools.
+</p><div class="evidence"><div class="evidence-row">
+<span>Habit & context cues</span>
+<span>STRONG</span>
+</div><div class="evidence-row">
+<span>If-then planning</span>
+<span>STRONG</span>
+</div><div class="evidence-row">
+<span>CBT / ACT-informed tools</span>
+<span>MODERATE</span>
+</div><div class="evidence-row">
+<span>Trigger mapping</span>
+<span>MODERATE</span>
+</div><div class="evidence-row">
+<span>Device friction</span>
+<span>PRACTICAL</span>
+</div></div><div class="note">
+<strong>
+90 days is the operating system — not a biological finish line.
+</strong>
+</div></div>
+</section><!-- OBJECTION --><section>
+<div class="wrap"><div class="label">
+You've tried before
+</div><h2>
+"I've already tried to quit."
+</h2><p>
+That's exactly why the guide doesn't start with motivation.
+</p><p>
+It starts with the environment, the trigger, the access point, the urge and the recovery process.
+</p><p>
+If your old approach was simply "I'll never do it again," Unplugged gives you something more concrete to operate.
+</p><div class="note">
+<strong>
+You don't need a stronger promise. You need a better system.
+</strong>
+</div></div>
+</section><!-- PRICE --><section>
+<div class="wrap price"><div class="label">
+The price
+</div><h2>
+One-time. No subscription.
+</h2><div class="amt">
+$9.99
+</div><p class="muted">
+Instant download · Private · One-time payment
+</p><p>
+A practical system, delivered once. No recurring charge.
+</p></div>
+</section><!-- FAQ --><section>
+<div class="wrap"><div class="label">
+Questions
+</div><h2>
+Before you decide.
+</h2><details>
+<summary>
+What exactly do I get?
+</summary><p>
+A 50-page guide containing the complete 90-day system, Urge Protocol, high-risk situation plans, Field Kit, tracker, scorecard, Day 91 Plan and evidence chapter.
+</p>
+</details><details>
+<summary>
+What if I slip during the 90 days?
+</summary><p>
+Use the 24-Hour Return. Stop, understand what happened, repair the weak point and return to structure. A lapse is an event, not an identity.
+</p>
+</details><details>
+<summary>
+Does it cover compulsive masturbation without pornography?
+</summary><p>
+Yes. Unplugged addresses both pornography and compulsive masturbation using the same trigger, access, urge, action and aftermath framework.
+</p>
+</details><details>
+<summary>
+Do I need to be religious?
+</summary><p>
+No. The system works with or without religious practice.
+</p>
+</details><details>
+<summary>
+Do I need paid blocking tools?
+</summary><p>
+No. The guide includes practical options for reducing access and increasing friction.
+</p>
+</details><details>
+<summary>
+Is this medical treatment?
+</summary><p>
+No. Unplugged is a self-guided educational guide and is not a substitute for professional care.
+</p>
+</details><details>
+<summary>
+Is it private?
+</summary><p>
+The guide is delivered digitally. Checkout and delivery are handled through Gumroad.
+</p>
+</details><details>
+<summary>
+What if I need professional help?
+</summary><p>
+If the behavior is causing serious distress or significantly interfering with daily life, professional support may be appropriate. Unplugged is not designed to replace that support.
+</p>
+</details></div>
+</section><!-- =========================================================
+     BUTTON 2 — FINAL CTA
+     ========================================================= --><section class="final">
+<div class="wrap"><div class="label">
+Your next move
+</div><h2>
+You already know the loop.<br>
+Now build the way out.
+</h2><p class="muted">
+Understand it. Interrupt it. Rebuild your life around something better.
+</p><a
+class="purchase-btn"
+href="https://thebrav0.gumroad.com/l/Unplugged"
+
+«»
+
+Get Unplugged — $9.99
+</a>
+
+<div class="micro">
+Instant download · One-time payment · No subscription
+</div></div>
+</section><footer><div class="wrap"><div class="mark">
+THE BRAVO 🔱
+</div>Reclaiming the Essence of Masculinity.
+
+</div>
+
+</footer>
+
+</body>
+  </html>
