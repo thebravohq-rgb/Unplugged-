@@ -1,908 +1,922 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="robots" content="noindex"><title>Unplugged — A 90-Day System to Quit Pornography | The Bravo</title><meta name="description" content="Unplugged is a practical 90-day system for breaking the cycle of pornography and compulsive masturbation."><meta property="og:title" content="Unplugged — Quit Pornography">
-<meta property="og:description" content="A practical 90-day system for breaking the cycle of pornography and compulsive masturbation.">
-<meta property="og:type" content="website"><meta name="theme-color" content="#141414"><style>
-:root{
-  --bg:#141414;
-  --panel:#1c1c1c;
-  --panel2:#222;
-  --gold:#C49A4A;
-  --gold2:#d9b469;
-  --text:#ECE8DF;
-  --muted:#A8A296;
-  --line:#2e2b25;
-  --serif:Georgia,"Times New Roman",serif;
-  --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
-  --mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
-}
-
-*{
-  box-sizing:border-box;
-  margin:0;
-  padding:0;
-}
-
-html{
-  scroll-behavior:smooth;
-}
-
-@media(prefers-reduced-motion:reduce){
-  html{scroll-behavior:auto}
-  *{transition:none!important}
-}
-
-body{
-  background:var(--bg);
-  color:var(--text);
-  font-family:var(--sans);
-  font-size:17px;
-  line-height:1.6;
-  -webkit-font-smoothing:antialiased;
-  padding-bottom:40px;
-  background-image:
-    radial-gradient(
-      ellipse at 50% -10%,
-      rgba(196,154,74,.10),
-      transparent 55%
-    );
-}
-
-.wrap{
-  max-width:680px;
-  margin:0 auto;
-  padding:0 20px;
-}
-
-section{
-  padding:52px 0;
-  border-top:1px solid var(--line);
-}
-
-.top{
-  padding:16px 0;
-  text-align:center;
-  font:12px var(--mono);
-  letter-spacing:.3em;
-  color:var(--gold);
-}
-
-.label{
-  font:12px var(--mono);
-  letter-spacing:.14em;
-  text-transform:uppercase;
-  color:var(--gold);
-  margin-bottom:14px;
-}
-
-h1,h2,h3{
-  font-family:var(--serif);
-  font-weight:700;
-  line-height:1.18;
-  color:var(--text);
-}
-
-h1{
-  font-size:clamp(34px,8.5vw,50px);
-  letter-spacing:-.01em;
-}
-
-h2{
-  font-size:clamp(27px,7vw,37px);
-  margin-bottom:18px;
-}
-
-h3{
-  font-size:20px;
-  margin-bottom:7px;
-}
-
-p{
-  margin-bottom:16px;
-}
-
-.muted{
-  color:var(--muted);
-}
-
-strong,b{
-  color:#fff;
-}
-
-.gold{
-  color:var(--gold);
-}
-
-
-/* BUTTONS
-   ONLY TWO PURCHASE BUTTONS EXIST IN THIS PAGE.
-*/
-
-.purchase-btn{
-  display:block;
-  width:100%;
-  text-align:center;
-  background:var(--gold);
-  color:#141414;
-  font-weight:800;
-  font-size:18px;
-  padding:17px 20px;
-  border-radius:6px;
-  text-decoration:none;
-  border:0;
-  box-shadow:0 6px 24px rgba(196,154,74,.22);
-  transition:background .15s;
-}
-
-.purchase-btn:hover,
-.purchase-btn:focus{
-  background:var(--gold2);
-}
-
-.micro{
-  font:12px var(--mono);
-  color:var(--muted);
-  text-align:center;
-  margin-top:11px;
-}
-
-
-/* HERO */
-
-.hero{
-  padding:38px 0 56px;
-  text-align:center;
-  border-top:0;
-}
-
-.hero .sub{
-  font-size:19px;
-  color:#d6d1c6;
-  margin:20px 0 28px;
-}
-
-.trust{
-  display:flex;
-  flex-wrap:wrap;
-  gap:8px 18px;
-  justify-content:center;
-  margin-top:18px;
-  font-size:13px;
-  color:var(--muted);
-}
-
-.trust span:before{
-  content:"▪ ";
-  color:var(--gold);
-}
-
-
-/* MIRROR */
-
-.mirror p{
-  font:21px/1.4 var(--serif);
-  border-left:2px solid var(--gold);
-  padding-left:16px;
-  margin-bottom:17px;
-}
-
-.pivot{
-  font:26px/1.25 var(--serif);
-  margin-top:28px;
-  color:#fff;
-}
-
-.pivot em{
-  font-style:normal;
-  color:var(--gold);
-}
-
-
-/* LOOP */
-
-.loop{
-  list-style:none;
-  margin:25px 0;
-}
-
-.loop li{
-  background:var(--panel);
-  border:1px solid var(--line);
-  border-radius:7px;
-  padding:15px 17px;
-  position:relative;
-  margin-bottom:22px;
-}
-
-.loop li:not(:last-child):after{
-  content:"↓";
-  position:absolute;
-  left:50%;
-  bottom:-24px;
-  transform:translateX(-50%);
-  color:var(--gold);
-  font-size:18px;
-}
-
-.loop b{
-  display:block;
-  font:12px var(--mono);
-  letter-spacing:.12em;
-  color:var(--gold);
-  margin-bottom:3px;
-}
-
-.loop span{
-  display:block;
-  color:#cfc9bc;
-  font-size:15px;
-}
-
-.note{
-  background:var(--panel);
-  border:1px solid var(--line);
-  border-left:3px solid var(--gold);
-  padding:16px 18px;
-  border-radius:5px;
-  margin:22px 0;
-}
-
-
-/* PHASES */
-
-.phase{
-  background:var(--panel);
-  border:1px solid var(--line);
-  border-radius:8px;
-  padding:21px 19px;
-  margin-bottom:13px;
-}
-
-.phase .days{
-  font:12px var(--mono);
-  letter-spacing:.14em;
-  color:var(--gold);
-}
-
-.phase h3{
-  font-size:27px;
-  margin:5px 0 7px;
-}
-
-.phase ul{
-  margin:9px 0 0 18px;
-  color:#cfc9bc;
-  font-size:15px;
-}
-
-.phase li{
-  margin-bottom:4px;
-}
-
-
-/* CONTENT GRID */
-
-.grid{
-  display:grid;
-  gap:11px;
-  margin-top:21px;
-}
-
-.item{
-  background:var(--panel);
-  border:1px solid var(--line);
-  border-radius:7px;
-  padding:16px 17px;
-}
-
-.item h3{
-  font-size:18px;
-  color:var(--gold2);
-}
-
-.item p{
-  margin:0;
-  color:#cfc9bc;
-  font-size:15px;
-}
-
-
-/* EMERGENCY CARD */
-
-.card{
-  background:#101010;
-  border:1px solid var(--gold);
-  border-radius:6px;
-  padding:21px 19px;
-  font:14px/1.9 var(--mono);
-  margin:20px 0;
-  box-shadow:0 0 0 4px rgba(196,154,74,.05);
-}
-
-.card .t{
-  color:var(--gold);
-  letter-spacing:.17em;
-  margin-bottom:8px;
-  font-size:12px;
-}
-
-.card b{
-  color:var(--gold2);
-}
-
-
-/* CHECKLIST */
-
-.ticks{
-  list-style:none;
-  margin:15px 0 20px;
-}
-
-.ticks li{
-  position:relative;
-  padding-left:28px;
-  margin-bottom:11px;
-}
-
-.ticks li:before{
-  content:"✓";
-  position:absolute;
-  left:0;
-  color:var(--gold);
-  font-weight:700;
-}
-
-.nos li:before{
-  content:"✕";
-  color:#b0554a;
-}
-
-
-/* TWO COLUMNS */
-
-.cols{
-  display:grid;
-  gap:12px;
-}
-
-.col{
-  background:var(--panel);
-  border:1px solid var(--line);
-  border-radius:8px;
-  padding:19px;
-}
-
-
-/* EVIDENCE */
-
-.evidence{
-  background:var(--panel);
-  border:1px solid var(--line);
-  border-radius:7px;
-  padding:18px;
-  margin-top:20px;
-}
-
-.evidence-row{
-  display:flex;
-  justify-content:space-between;
-  gap:20px;
-  padding:9px 0;
-  border-bottom:1px solid var(--line);
-  font-size:14px;
-}
-
-.evidence-row:last-child{
-  border-bottom:0;
-}
-
-.evidence-row span:last-child{
-  color:var(--gold);
-  font-family:var(--mono);
-  font-size:12px;
-}
-
-
-/* PRICE */
-
-.price{
-  text-align:center;
-}
-
-.price .amt{
-  font:64px/1 var(--serif);
-  color:var(--gold);
-  margin:7px 0 5px;
-}
-
-
-/* FAQ */
-
-details{
-  background:var(--panel);
-  border:1px solid var(--line);
-  border-radius:6px;
-  margin-bottom:9px;
-}
-
-summary{
-  cursor:pointer;
-  padding:15px 17px;
-  font-weight:700;
-  color:#fff;
-  list-style:none;
-  position:relative;
-  padding-right:40px;
-}
-
-summary::-webkit-details-marker{
-  display:none;
-}
-
-summary:after{
-  content:"+";
-  position:absolute;
-  right:17px;
-  top:10px;
-  color:var(--gold);
-  font-size:22px;
-}
-
-details[open] summary:after{
-  content:"–";
-}
-
-details p{
-  padding:0 17px 15px;
-  margin:0;
-  color:#cfc9bc;
-  font-size:15px;
-}
-
-
-/* FINAL */
-
-.final{
-  text-align:center;
-}
-
-.final h2{
-  font-size:clamp(29px,7vw,40px);
-}
-
-
-/* FOOTER */
-
-footer{
-  border-top:1px solid var(--line);
-  padding:32px 0;
-  text-align:center;
-  font-size:13px;
-  color:var(--muted);
-}
-
-footer .mark{
-  font:13px var(--mono);
-  letter-spacing:.25em;
-  color:var(--gold);
-  margin-bottom:10px;
-}
-
-
-/* DESKTOP */
-
-@media(min-width:720px){
-
-  .grid{
-    grid-template-columns:1fr 1fr;
-  }
-
-  .cols{
-    grid-template-columns:1fr 1fr;
-  }
-
-  body{
-    font-size:18px;
-  }
-
-}
-</style></head><body><div class="top">THE BRAVO 🔱</div><!-- =========================================================
-     BUTTON 1 — HERO
-     ========================================================= --><header class="hero">
-<div class="wrap"><div class="label">
-A 90-Day System · Detox · Rebuild · Thrive
-</div><h1>
-Quitting pornography isn't a willpower problem.<br>
-It's a loop with no exit.
-</h1><p class="sub">
-Unplugged gives you a practical system to break the cycle of pornography and compulsive masturbation — understand the loop, cut the triggers, handle urges and rebuild your life.
-</p><a
-class="purchase-btn"
-href="https://thebrav0.gumroad.com/l/Unplugged"
-
-«»
-
-Get Unplugged — $9.99
-</a>
-
-<div class="micro">
-Instant download · One-time payment · Private
-</div><div class="trust">
-<span>50-page guide</span>
-<span>90-day system</span>
-<span>Works on your phone</span>
-</div></div>
-</header><!-- MIRROR --><section class="mirror">
-<div class="wrap"><div class="label">
-Sound familiar?
-</div><p>
-You told yourself it was the last time.
-</p><p>
-You deleted everything. Then you found a way back in.
-</p><p>
-You promised yourself you'd stop. Then the same situation showed up again.
-</p><p>
-The shame didn't break the pattern. It became part of it.
-</p><p>
-Your time, focus and self-trust keep paying the bill.
-</p><div class="pivot">
-You don't need another promise.<br>
-<em>You need a system.</em>
-</div></div>
-</section><!-- THE LOOP --><section>
-<div class="wrap"><div class="label">
-Why it keeps happening
-</div><h2>
-Every loop has an entry point.
-</h2><p class="muted">
-Most men wait until the urge is at its strongest. Unplugged teaches you to recognize and interrupt the circuit earlier.
-</p><ol class="loop"><li>
-<b>01 · TRIGGER</b>
-<span>
-Stress, boredom, loneliness, rejection, nighttime or a digital cue.
-</span>
-</li><li>
-<b>02 · ACCESS</b>
-<span>
-Privacy, devices and easy pathways to the behavior.
-</span>
-</li><li>
-<b>03 · URGE</b>
-<span>
-The pull to act. An urge is an experience, not an instruction.
-</span>
-</li><li>
-<b>04 · ACT</b>
-<span>
-The behavior itself.
-</span>
-</li><li>
-<b>05 · AFTERMATH</b>
-<span>
-Relief, regret, lost time and conditions for the next loop.
-</span>
-</li></ol><div class="note">
-<strong>The earlier you intervene, the cheaper the intervention.</strong>
-Unplugged is built around that principle.
-</div></div>
-</section><!-- 90-DAY SYSTEM --><section>
-<div class="wrap"><div class="label">
-The system
-</div><h2>
-90 days. Three phases. One standard.
-</h2><p class="muted">
-The goal isn't to chase a perfect streak. The goal is to build a system you can operate when motivation disappears.
-</p><div class="phase"><div class="days">
-DAYS 1–30
-</div><h3>
-DETOX
-</h3><p>
-Interrupt the old pattern before you depend on willpower.
-</p><ul>
-<li>Map your triggers and first compromises</li>
-<li>Protect your danger hours</li>
-<li>Clean up your digital environment</li>
-<li>Build your first non-negotiable rules</li>
-</ul></div><div class="phase"><div class="days">
-DAYS 31–60
-</div><h3>
-REBUILD
-</h3><p>
-Replace what the habit was doing for you.
-</p><ul>
-<li>Match triggers with real replacements</li>
-<li>Build stronger mornings and evenings</li>
-<li>Put connection where isolation used to win</li>
-<li>Practice the system on difficult days</li>
-</ul></div><div class="phase"><div class="days">
-DAYS 61–90
-</div><h3>
-THRIVE
-</h3><p>
-Turn recovery into a standard you can keep.
-</p><ul>
-<li>Put your attention into meaningful work</li>
-<li>Strengthen relationships and purpose</li>
-<li>Write the rules that remain after Day 90</li>
-<li>Build your Day 91 Plan</li>
-</ul></div><p class="muted">
-Every phase ends with a Phase Gate. If you're not ready, you repeat the weak part. Repeating a phase is maintenance, not failure.
-</p></div>
-</section><!-- WHAT'S INSIDE --><section>
-<div class="wrap"><div class="label">
-What's inside
-</div><h2>
-A full system, not a pep talk.
-</h2><div class="grid"><div class="item">
-<h3>30-Minute Day 1 Setup</h3>
-<p>
-Clean up your digital environment, reduce access and establish your first barriers.
-</p>
-</div><div class="item">
-<h3>6-Step Urge Protocol</h3>
-<p>
-Notice. Name. Distance. Delay. Redirect. Review. A simple process for the first minute of an urge.
-</p>
-</div><div class="item">
-<h3>The Bypass Protocol</h3>
-<p>
-What to do when your mind starts looking for a way around the rules.
-</p>
-</div><div class="item">
-<h3>11 High-Risk Situations</h3>
-<p>
-Plans for insomnia, rejection, anger, loneliness, failure, travel, long weekends and more.
-</p>
-</div><div class="item">
-<h3>Floor Day</h3>
-<p>
-The minimum version of the system you keep when life gets messy.
-</p>
-</div><div class="item">
-<h3>The 24-Hour Return</h3>
-<p>
-A recovery sequence for repairing the weak point and getting back into structure.
-</p>
-</div><div class="item">
-<h3>13-Week Roadmap</h3>
-<p>
-Every week has a goal, habit, action, measurement and fallback.
-</p>
-</div><div class="item">
-<h3>The Field Kit</h3>
-<p>
-Emergency Card, Trigger Map, If-Then Plans, Replacement Menu and Weekly Review.
-</p>
-</div><div class="item">
-<h3>90-Day Tracker + Scorecard</h3>
-<p>
-Daily checks and weekly reviews that show whether your system is actually working.
-</p>
-</div><div class="item">
-<h3>Day 91 Plan</h3>
-<p>
-Turn the system into a standard that continues after the guide ends.
-</p>
-</div></div></div>
-</section><!-- SAMPLE PAGE --><section>
-<div class="wrap"><div class="label">
-A page from the guide
-</div><h2>
-The Emergency Card.
-</h2><p class="muted">
-Built to be screenshotted and kept on your phone for the moment you need it.
-</p><div class="card"><div class="t">
-EMERGENCY CARD
-</div><b>NOTICE.</b> Catch the urge.<br>
-
-<b>NAME.</b> This is an urge, not an instruction.<br>
-
-<b>DISTANCE.</b> Put the device down and leave the private space.<br>
-
-<b>DELAY.</b> I do not decide right now.<br>
-
-<b>REDIRECT.</b> Use the replacement that fits the need.<br>
-
-<b>REVIEW.</b> Learn what triggered it.<br><br>
-
-If I search for a workaround, I stop and run the protocol.<br>
-
-If I slip, I run the 24-Hour Return.
-
-</div></div>
-</section><!-- OUTCOMES --><section>
-<div class="wrap"><div class="label">
-What changes
-</div><h2>
-Built to give you control back in practice.
-</h2><ul class="ticks"><li>
-You know your triggers and first compromises.
-</li><li>
-You know what to do when an urge hits.
-</li><li>
-Your digital environment has stronger barriers.
-</li><li>
-You have a recovery plan instead of a shame spiral.
-</li><li>
-Your nights have structure and your days have direction.
-</li><li>
-Your attention starts going somewhere useful.
-</li><li>
-You have a standard that continues beyond Day 90.
-</li></ul><p class="muted">
-No guarantees. Results depend on what you do with the system.
-</p></div>
-</section><!-- WHO IT'S FOR --><section>
-<div class="wrap"><div class="label">
-Read this before you buy
-</div><h2>
-Who this is for. Who it isn't.
-</h2><div class="cols"><div class="col"><h3 class="gold">
-This is for you if
-</h3><ul class="ticks"><li>
-You've tried to quit and the same pattern keeps returning.
-</li><li>
-You want a private, self-guided plan instead of another lecture.
-</li><li>
-You're willing to change your environment and follow the system.
-</li><li>
-You want a practical standard you can build around.
-</li></ul></div><div class="col"><h3 style="color:#c97d72">
-This isn't for you if
-</h3><ul class="ticks nos"><li>
-You want a magic reset or guaranteed timeline.
-</li><li>
-You want to be shamed into changing.
-</li><li>
-You expect the guide to do the work for you.
-</li><li>
-You need immediate professional support.
-</li></ul></div></div></div>
-</section><!-- STRAIGHT TALK --><section>
-<div class="wrap"><div class="label">
-Straight talk
-</div><h2>
-No brain-reset myths. No fake promises.
-</h2><p>
-Unplugged is built around habit, context, environmental design and practical behavior-change tools.
-</p><p>
-It does not promise a specific "brain reset" date, a guaranteed timeline or a perfect streak.
-</p><p>
-The guide includes an evidence chapter with cited sources and distinguishes stronger evidence from practical tools.
-</p><div class="evidence"><div class="evidence-row">
-<span>Habit & context cues</span>
-<span>STRONG</span>
-</div><div class="evidence-row">
-<span>If-then planning</span>
-<span>STRONG</span>
-</div><div class="evidence-row">
-<span>CBT / ACT-informed tools</span>
-<span>MODERATE</span>
-</div><div class="evidence-row">
-<span>Trigger mapping</span>
-<span>MODERATE</span>
-</div><div class="evidence-row">
-<span>Device friction</span>
-<span>PRACTICAL</span>
-</div></div><div class="note">
-<strong>
-90 days is the operating system — not a biological finish line.
-</strong>
-</div></div>
-</section><!-- OBJECTION --><section>
-<div class="wrap"><div class="label">
-You've tried before
-</div><h2>
-"I've already tried to quit."
-</h2><p>
-That's exactly why the guide doesn't start with motivation.
-</p><p>
-It starts with the environment, the trigger, the access point, the urge and the recovery process.
-</p><p>
-If your old approach was simply "I'll never do it again," Unplugged gives you something more concrete to operate.
-</p><div class="note">
-<strong>
-You don't need a stronger promise. You need a better system.
-</strong>
-</div></div>
-</section><!-- PRICE --><section>
-<div class="wrap price"><div class="label">
-The price
-</div><h2>
-One-time. No subscription.
-</h2><div class="amt">
-$9.99
-</div><p class="muted">
-Instant download · Private · One-time payment
-</p><p>
-A practical system, delivered once. No recurring charge.
-</p></div>
-</section><!-- FAQ --><section>
-<div class="wrap"><div class="label">
-Questions
-</div><h2>
-Before you decide.
-</h2><details>
-<summary>
-What exactly do I get?
-</summary><p>
-A 50-page guide containing the complete 90-day system, Urge Protocol, high-risk situation plans, Field Kit, tracker, scorecard, Day 91 Plan and evidence chapter.
-</p>
-</details><details>
-<summary>
-What if I slip during the 90 days?
-</summary><p>
-Use the 24-Hour Return. Stop, understand what happened, repair the weak point and return to structure. A lapse is an event, not an identity.
-</p>
-</details><details>
-<summary>
-Does it cover compulsive masturbation without pornography?
-</summary><p>
-Yes. Unplugged addresses both pornography and compulsive masturbation using the same trigger, access, urge, action and aftermath framework.
-</p>
-</details><details>
-<summary>
-Do I need to be religious?
-</summary><p>
-No. The system works with or without religious practice.
-</p>
-</details><details>
-<summary>
-Do I need paid blocking tools?
-</summary><p>
-No. The guide includes practical options for reducing access and increasing friction.
-</p>
-</details><details>
-<summary>
-Is this medical treatment?
-</summary><p>
-No. Unplugged is a self-guided educational guide and is not a substitute for professional care.
-</p>
-</details><details>
-<summary>
-Is it private?
-</summary><p>
-The guide is delivered digitally. Checkout and delivery are handled through Gumroad.
-</p>
-</details><details>
-<summary>
-What if I need professional help?
-</summary><p>
-If the behavior is causing serious distress or significantly interfering with daily life, professional support may be appropriate. Unplugged is not designed to replace that support.
-</p>
-</details></div>
-</section><!-- =========================================================
-     BUTTON 2 — FINAL CTA
-     ========================================================= --><section class="final">
-<div class="wrap"><div class="label">
-Your next move
-</div><h2>
-You already know the loop.<br>
-Now build the way out.
-</h2><p class="muted">
-Understand it. Interrupt it. Rebuild your life around something better.
-</p><a
-class="purchase-btn"
-href="https://thebrav0.gumroad.com/l/Unplugged"
-
-«»
-
-Get Unplugged — $9.99
-</a>
-
-<div class="micro">
-Instant download · One-time payment · No subscription
-</div></div>
-</section><footer><div class="wrap"><div class="mark">
-THE BRAVO 🔱
-</div>Reclaiming the Essence of Masculinity.
-
-</div>
-
-</footer>
-
-</body>
-  </html>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="UNPLUGGED — A Practical Guide to Quitting Pornography by The Bravo. A practical system for understanding the pattern, breaking the cycle, and building a stronger daily standard.">
+  <meta name="robots" content="index,follow">
+  <meta property="og:title" content="UNPLUGGED — A Practical Guide to Quitting Pornography">
+  <meta property="og:description" content="Understand the pattern. Break the cycle. Build a standard you can keep.">
+  <meta property="og:type" content="product">
+  <meta property="og:image" content="OG_IMAGE_URL_HERE">
+  <meta name="theme-color" content="#0a0a0a">
+  <title>UNPLUGGED — A Practical Guide to Quitting Pornography | The Bravo</title>
+
+  <style>
+    :root {
+      --black: #0a0a0a;
+      --black-2: #11110f;
+      --black-3: #171714;
+      --white: #f4f1e9;
+      --muted: #a9a59b;
+      --gold: #c49a4a;
+      --gold-light: #d7b56c;
+      --line: rgba(196,154,74,.22);
+      --card: rgba(255,255,255,.035);
+      --max: 1120px;
+      --radius: 18px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background:
+        radial-gradient(circle at 50% -10%, rgba(196,154,74,.10), transparent 34%),
+        var(--black);
+      color: var(--white);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      opacity: .035;
+      background-image:
+        url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.7'/%3E%3C/svg%3E");
+      z-index: 10;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .wrap {
+      width: min(calc(100% - 36px), var(--max));
+      margin-inline: auto;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--gold-light);
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: .22em;
+      text-transform: uppercase;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 24px;
+      height: 1px;
+      background: var(--gold);
+    }
+
+    h1, h2, h3 {
+      font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: -.025em;
+      line-height: .94;
+    }
+
+    h1 {
+      font-size: clamp(52px, 14vw, 112px);
+    }
+
+    h2 {
+      font-size: clamp(38px, 8vw, 72px);
+    }
+
+    h3 {
+      font-size: 25px;
+    }
+
+    p {
+      color: var(--muted);
+    }
+
+    .gold {
+      color: var(--gold-light);
+    }
+
+    .section {
+      padding: 86px 0;
+      border-top: 1px solid rgba(255,255,255,.07);
+    }
+
+    /* HERO */
+
+    .hero {
+      min-height: 100svh;
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+      padding: 50px 0 70px;
+    }
+
+    .hero::after {
+      content: "🔱";
+      position: absolute;
+      right: -65px;
+      bottom: -90px;
+      font-size: 360px;
+      line-height: 1;
+      opacity: .025;
+      transform: rotate(-12deg);
+      pointer-events: none;
+    }
+
+    .hero-inner {
+      position: relative;
+      z-index: 2;
+      max-width: 850px;
+    }
+
+    .brand {
+      color: var(--white);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: .28em;
+      text-transform: uppercase;
+      margin-bottom: 34px;
+    }
+
+    .hero h1 {
+      margin: 16px 0 18px;
+      max-width: 900px;
+    }
+
+    .hero h1 span {
+      color: var(--gold-light);
+    }
+
+    .subtitle {
+      font-size: 15px;
+      color: #d5d1c8;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      font-weight: 700;
+      margin-bottom: 28px;
+    }
+
+    .hero-copy {
+      max-width: 650px;
+      font-size: clamp(18px, 4.5vw, 22px);
+      line-height: 1.5;
+      margin-bottom: 34px;
+    }
+
+    .cta {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 58px;
+      padding: 0 29px;
+      border-radius: 7px;
+      background: var(--gold);
+      color: #080806;
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: .13em;
+      transition: transform .2s ease, background .2s ease;
+      box-shadow: 0 12px 35px rgba(196,154,74,.16);
+    }
+
+    .cta:hover {
+      background: var(--gold-light);
+      transform: translateY(-2px);
+    }
+
+    .cta:focus-visible {
+      outline: 3px solid var(--white);
+      outline-offset: 4px;
+    }
+
+    .reassurance {
+      font-size: 12px;
+      margin-top: 13px;
+      color: #858178;
+    }
+
+    /* PROBLEM */
+
+    .problem-grid {
+      display: grid;
+      gap: 38px;
+    }
+
+    .problem-copy {
+      font-size: 19px;
+      line-height: 1.65;
+    }
+
+    .problem-list {
+      display: grid;
+      gap: 1px;
+      background: var(--line);
+      border: 1px solid var(--line);
+    }
+
+    .problem-item {
+      background: var(--black-2);
+      padding: 21px 20px;
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+    }
+
+    .problem-item strong {
+      color: var(--white);
+      font-size: 15px;
+    }
+
+    .problem-item::before {
+      content: "—";
+      color: var(--gold);
+      font-weight: 900;
+    }
+
+    /* REAL PROBLEM */
+
+    .statement {
+      border-left: 2px solid var(--gold);
+      padding: 8px 0 8px 22px;
+      margin: 35px 0;
+    }
+
+    .statement p {
+      color: var(--white);
+      font-family: Georgia, serif;
+      font-size: clamp(24px, 6vw, 42px);
+      line-height: 1.18;
+    }
+
+    .two-col {
+      display: grid;
+      gap: 34px;
+    }
+
+    .two-col p {
+      font-size: 17px;
+    }
+
+    /* PRODUCT */
+
+    .product-intro {
+      max-width: 730px;
+      margin-bottom: 48px;
+    }
+
+    .product-intro p {
+      margin-top: 22px;
+      font-size: 18px;
+    }
+
+    .framework {
+      display: grid;
+      gap: 12px;
+    }
+
+    .framework-card {
+      position: relative;
+      padding: 30px 24px;
+      background: var(--card);
+      border: 1px solid rgba(255,255,255,.08);
+      overflow: hidden;
+    }
+
+    .framework-card::after {
+      content: attr(data-number);
+      position: absolute;
+      right: -4px;
+      bottom: -30px;
+      font-family: Impact, sans-serif;
+      font-size: 130px;
+      line-height: 1;
+      color: rgba(196,154,74,.055);
+    }
+
+    .framework-card .number {
+      color: var(--gold);
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: .15em;
+    }
+
+    .framework-card h3 {
+      margin: 10px 0;
+      font-size: 32px;
+    }
+
+    .framework-card p {
+      max-width: 560px;
+    }
+
+    /* INSIDE */
+
+    .inside-grid {
+      display: grid;
+      gap: 12px;
+    }
+
+    .inside-card {
+      padding: 25px 22px;
+      background: var(--black-2);
+      border: 1px solid rgba(255,255,255,.07);
+    }
+
+    .inside-card h3 {
+      font-size: 22px;
+      margin-bottom: 8px;
+    }
+
+    .inside-card p {
+      font-size: 15px;
+    }
+
+    .tag {
+      display: inline-block;
+      color: var(--gold-light);
+      font-size: 10px;
+      letter-spacing: .14em;
+      font-weight: 900;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    /* 90 DAY */
+
+    .days {
+      position: relative;
+      padding: 35px 25px;
+      background:
+        linear-gradient(135deg, rgba(196,154,74,.10), transparent 55%),
+        var(--black-2);
+      border: 1px solid var(--line);
+    }
+
+    .days::before {
+      content: "90";
+      position: absolute;
+      right: 10px;
+      top: -20px;
+      font-family: Impact, sans-serif;
+      font-size: 170px;
+      color: rgba(196,154,74,.055);
+      line-height: 1;
+      pointer-events: none;
+    }
+
+    .days h3 {
+      font-size: 36px;
+      position: relative;
+    }
+
+    .days p {
+      position: relative;
+      max-width: 690px;
+      margin-top: 18px;
+      font-size: 17px;
+    }
+
+    .phases {
+      display: grid;
+      gap: 1px;
+      margin-top: 30px;
+      background: var(--line);
+      position: relative;
+    }
+
+    .phase {
+      background: var(--black);
+      padding: 20px;
+    }
+
+    .phase strong {
+      display: block;
+      color: var(--gold-light);
+      font-size: 12px;
+      letter-spacing: .15em;
+      margin-bottom: 5px;
+    }
+
+    /* STANDARD */
+
+    .standard {
+      text-align: center;
+      max-width: 800px;
+      margin-inline: auto;
+    }
+
+    .standard h2 {
+      margin: 15px 0 25px;
+    }
+
+    .standard .big {
+      color: var(--white);
+      font-family: Georgia, serif;
+      font-size: clamp(28px, 7vw, 54px);
+      line-height: 1.15;
+    }
+
+    .standard p:last-child {
+      margin-top: 22px;
+      font-size: 17px;
+    }
+
+    /* FIT */
+
+    .fit-grid {
+      display: grid;
+      gap: 18px;
+      margin-top: 40px;
+    }
+
+    .fit-box {
+      padding: 28px 23px;
+      border: 1px solid rgba(255,255,255,.08);
+      background: var(--card);
+    }
+
+    .fit-box h3 {
+      font-size: 23px;
+      margin-bottom: 18px;
+    }
+
+    .fit-box ul {
+      list-style: none;
+      display: grid;
+      gap: 12px;
+    }
+
+    .fit-box li {
+      color: var(--muted);
+      padding-left: 20px;
+      position: relative;
+    }
+
+    .fit-box li::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      color: var(--gold);
+      font-weight: 900;
+    }
+
+    .fit-box.no {
+      border-color: rgba(255,255,255,.05);
+    }
+
+    /* GET */
+
+    .get-box {
+      border: 1px solid var(--line);
+      background: var(--black-2);
+      padding: 30px 24px;
+    }
+
+    .get-box .product-name {
+      color: var(--gold-light);
+      font-family: Impact, sans-serif;
+      font-size: 45px;
+      line-height: 1;
+      letter-spacing: -.01em;
+    }
+
+    .get-box .product-subtitle {
+      margin: 8px 0 27px;
+      color: #d0ccc3;
+      font-size: 15px;
+    }
+
+    .get-list {
+      display: grid;
+      gap: 13px;
+      list-style: none;
+    }
+
+    .get-list li {
+      color: var(--muted);
+      padding-left: 25px;
+      position: relative;
+    }
+
+    .get-list li::before {
+      content: "✓";
+      color: var(--gold);
+      position: absolute;
+      left: 0;
+      font-weight: 900;
+    }
+
+    /* PRICE */
+
+    .price-box {
+      max-width: 680px;
+      margin-inline: auto;
+      text-align: center;
+      padding: 42px 24px;
+      border: 1px solid var(--line);
+      background:
+        radial-gradient(circle at 50% 0, rgba(196,154,74,.11), transparent 55%),
+        var(--black-2);
+    }
+
+    .price-label {
+      color: var(--muted);
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: .2em;
+      font-weight: 800;
+    }
+
+    .price {
+      font-family: Impact, sans-serif;
+      font-size: clamp(55px, 14vw, 90px);
+      line-height: 1;
+      margin: 15px 0;
+      color: var(--gold-light);
+    }
+
+    .price-note {
+      font-size: 13px;
+      margin-bottom: 24px;
+    }
+
+    /* FAQ */
+
+    .faq {
+      max-width: 850px;
+      margin-inline: auto;
+    }
+
+    details {
+      border-bottom: 1px solid rgba(255,255,255,.09);
+      padding: 20px 0;
+    }
+
+    summary {
+      cursor: pointer;
+      color: var(--white);
+      font-weight: 800;
+      font-size: 16px;
+      padding-right: 25px;
+      list-style: none;
+      position: relative;
+    }
+
+    summary::-webkit-details-marker {
+      display: none;
+    }
+
+    summary::after {
+      content: "+";
+      position: absolute;
+      right: 0;
+      color: var(--gold);
+      font-size: 22px;
+      top: -4px;
+    }
+
+    details[open] summary::after {
+      content: "−";
+    }
+
+    details p {
+      margin-top: 14px;
+      font-size: 15px;
+      max-width: 750px;
+    }
+
+    /* FINAL */
+
+    .final {
+      text-align: center;
+      padding: 100px 0 90px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .final::before {
+      content: "UNPLUGGED";
+      position: absolute;
+      left: 50%;
+      top: 55%;
+      transform: translate(-50%, -50%);
+      font-family: Impact, sans-serif;
+      font-size: clamp(90px, 25vw, 260px);
+      white-space: nowrap;
+      color: rgba(255,255,255,.018);
+      pointer-events: none;
+    }
+
+    .final-inner {
+      position: relative;
+      z-index: 2;
+    }
+
+    .final h2 {
+      max-width: 850px;
+      margin: 15px auto 22px;
+    }
+
+    .final p {
+      max-width: 600px;
+      margin: 0 auto 32px;
+      font-size: 18px;
+    }
+
+    /* FOOTER */
+
+    footer {
+      border-top: 1px solid rgba(255,255,255,.07);
+      padding: 25px 0 35px;
+      text-align: center;
+    }
+
+    footer p {
+      font-size: 11px;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+
+    /* RESPONSIVE */
+
+    @media (min-width: 700px) {
+      .wrap {
+        width: min(calc(100% - 64px), var(--max));
+      }
+
+      .hero {
+        padding: 80px 0;
+      }
+
+      .problem-grid,
+      .two-col,
+      .fit-grid {
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+      }
+
+      .framework {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .inside-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .phases {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .get-box {
+        padding: 45px;
+      }
+
+      .section {
+        padding: 110px 0;
+      }
+    }
+
+    @media (min-width: 1000px) {
+      .inside-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .hero-inner {
+        max-width: 900px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      .cta {
+        transition: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="wrap">
+      <div class="hero-inner">
+        <div class="brand">🔱 THE BRAVO</div>
+
+        <div class="eyebrow">A practical guide for men</div>
+
+        <h1>Break the cycle.<br><span>Build the standard.</span></h1>
+
+        <div class="subtitle">UNPLUGGED — A Practical Guide to Quitting Pornography</div>
+
+        <p class="hero-copy">
+          You don't need another promise to yourself.
+          You need a practical system for understanding the pattern, cutting the cycle,
+          and building a way of living you can actually keep.
+        </p>
+
+        <a class="cta" href="CHECKOUT_URL_HERE">GET UNPLUGGED</a>
+
+        <p class="reassurance">
+          Practical self-development material. No guarantees. No fake promises.
+        </p>
+      </div>
+    </div>
+  </header>
+
+
+  <!-- THE PROBLEM -->
+  <section class="section">
+    <div class="wrap">
+      <div class="problem-grid">
+
+        <div>
+          <div class="eyebrow">01 · The pattern</div>
+          <h2 style="margin-top:16px;">You know<br>the cycle.</h2>
+
+          <p class="problem-copy" style="margin-top:24px;">
+            You make the decision. You mean it.
+            Then the difficult night comes. Stress. Boredom. Loneliness.
+            A quiet room. A private screen.
+          </p>
+
+          <p class="problem-copy" style="margin-top:18px;">
+            One small compromise becomes another.
+            Then you're back where you started, wondering why the same promise keeps ending the same way.
+          </p>
+        </div>
+
+        <div class="problem-list">
+          <div class="problem-item">
+            <strong>You decide to stop.</strong>
+          </div>
+          <div class="problem-item">
+            <strong>A trigger appears.</strong>
+          </div>
+          <div class="problem-item">
+            <strong>Access is already easy.</strong>
+          </div>
+          <div class="problem-item">
+            <strong>The urge builds.</strong>
+          </div>
+          <div class="problem-item">
+            <strong>You make the first compromise.</strong>
+          </div>
+          <div class="problem-item">
+            <strong>The cycle runs again.</strong>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- REAL PROBLEM -->
+  <section class="section">
+    <div class="wrap">
+
+      <div class="eyebrow">02 · Change the approach</div>
+
+      <div class="statement">
+        <p>
+          The answer isn't simply trying harder at the worst possible moment.
+        </p>
+      </div>
+
+      <div class="two-col">
+        <p>
+          If the same triggers, access points, private routines, and danger hours stay untouched,
+          you're asking willpower to solve a problem that starts before the final decision.
+        </p>
+
+        <p>
+          UNPLUGGED takes a different approach:
+          see the circuit, change the environment, catch the first compromise,
+          handle the urge, replace the job the habit was doing, and recover quickly when something goes wrong.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- INTRODUCE PRODUCT -->
+  <section class="section">
+    <div class="wrap">
+
+      <div class="product-intro">
+        <div class="eyebrow">03 · Meet UNPLUGGED</div>
+
+        <h2 style="margin-top:18px;">
+          A system.<br>
+          Not another speech.
+        </h2>
+
+        <p>
+          UNPLUGGED is a practical guide built around behavior, environment,
+          triggers, urges, recovery, and the standards you want your actions to reflect.
+        </p>
+
+        <p style="margin-top:15px;">
+          It gives you a 90-day operating system, practical field tools,
+          a day-by-day tracker, and a clear process for what to do when the plan gets tested.
+        </p>
+      </div>
+
+      <div class="framework">
+
+        <article class="framework-card" data-number="01">
+          <div class="number">01</div>
+          <h3>Understand</h3>
+          <p>
+            See the circuit: trigger, access, urge, act, aftermath.
+            Map the contexts and first compromises that keep pulling you back.
+          </p>
+        </article>
+
+        <article class="framework-card" data-number="02">
+          <div class="number">02</div>
+          <h3>Disconnect</h3>
+          <p>
+            Cut access, add friction, protect danger hours,
+            and use the six-step Urge Protocol when the pull appears.
+          </p>
+        </article>
+
+        <article class="framework-card" data-number="03">
+          <div class="number">03</div>
+          <h3>Rebuild</h3>
+          <p>
+            Replace what the old pattern was doing for you.
+            Build routines, connection, useful goals, and standards worth keeping.
+          </p>
+        </article>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- WHAT'S INSIDE -->
+  <section class="section">
+    <div class="wrap">
+
+      <div class="eyebrow">04 · What's inside</div>
+
+      <h2 style="margin-top:18px; max-width:760px;">
+        Built to be<br>used.
+      </h2>
+
+      <p style="max-width:700px; margin-top:22px; font-size:18px;">
+        This isn't designed to sit on your phone and collect dust.
+        The guide gives you pages to fill in, rules to build, situations to analyze,
+        and tools to use when the moment gets difficult.
+      </p>
+
+      <div class="inside-grid" style="margin-top:42px;">
+
+        <article class="inside-card">
+          <span class="tag">Core System</span>
+          <h3>The Bravo Circuit</h3>
+          <p>
+            Map the chain from trigger to aftermath so you can identify where to intervene earlier.
+          </p>
+        </article>
+
+        <article class="inside-card">
+          <span class="tag">Environment</span>
+          <h3>Cut Access</h3>
+          <p>
+            Remove, block, create distance, reduce privacy, delay, and replace.
+            Build barriers while you're calm.
+          </p>
+        </article>
+
+        <article class="inside-card">
+          <span class="tag">In The Moment</span>
+          <h3>Urge Protocol</h3>
+    
