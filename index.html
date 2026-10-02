@@ -2,23 +2,29 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">  <meta name="description" content="UNPLUGGED — A 90-Day Operating System to Break Free from Pornography by The Bravo.">
-  <meta name="robots" content="index,follow">  <meta property="og:title" content="UNPLUGGED — The Bravo">
-  <meta property="og:description" content="A 90-Day Operating System to break the pattern, rebuild your standards, and stay present.">  <title>UNPLUGGED — The Bravo</title>  <style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#0a0a0a">
+
+  <title>UNPLUGGED — The Bravo</title>
+
+  <style>
     :root {
-      --bg: #090909;
-      --surface: #101010;
-      --surface-2: #151515;
-      --line: #272727;
-      --text: #f2f0eb;
-      --muted: #97948d;
-      --muted-dark: #696761;
+      --black: #0a0a0a;
+      --black-2: #111111;
+      --black-3: #171717;
       --gold: #c49a4a;
-      --max: 760px;
+      --gold-light: #d8b76c;
+      --white: #f4f1e9;
+      --muted: #aaa69e;
+      --line: rgba(196, 154, 74, 0.22);
+      --max: 920px;
     }
 
     * {
       box-sizing: border-box;
+      margin: 0;
+      padding: 0;
     }
 
     html {
@@ -26,243 +32,186 @@
     }
 
     body {
-      margin: 0;
-      background: var(--bg);
-      color: var(--text);
+      background: var(--black);
+      color: var(--white);
       font-family: Arial, Helvetica, sans-serif;
-      line-height: 1.5;
-      -webkit-font-smoothing: antialiased;
+      line-height: 1.65;
+      overflow-x: hidden;
     }
 
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    .page {
-      width: min(calc(100% - 28px), var(--max));
+    .wrap {
+      width: min(calc(100% - 40px), var(--max));
       margin: 0 auto;
     }
 
-    .brand {
-      padding: 22px 0 8px;
-      color: var(--gold);
-      font-size: 10px;
-      font-weight: 800;
-      letter-spacing: 2.3px;
-    }
-
-    .hero {
-      padding: 52px 0 58px;
-      border-bottom: 1px solid var(--line);
-    }
-
-    .eyebrow,
-    .label {
-      color: var(--gold);
-      font-size: 9px;
-      font-weight: 800;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-    }
-
     .eyebrow {
-      margin-bottom: 14px;
+      color: var(--gold);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+
+    h1,
+    h2,
+    h3 {
+      line-height: 1.05;
+      letter-spacing: -1.5px;
     }
 
     h1 {
-      margin: 0;
-      font-size: clamp(55px, 15vw, 92px);
-      line-height: .84;
-      letter-spacing: -5px;
+      font-size: clamp(58px, 12vw, 116px);
       font-weight: 900;
+      letter-spacing: -5px;
     }
 
-    .subtitle {
-      margin-top: 17px;
+    h2 {
+      font-size: clamp(36px, 7vw, 66px);
+      margin-bottom: 24px;
+    }
+
+    h3 {
+      font-size: 21px;
+      margin-bottom: 8px;
+    }
+
+    p {
       color: var(--muted);
-      font-size: 13px;
+      font-size: 17px;
     }
 
-    .hero h2 {
+    strong {
+      color: var(--white);
+    }
+
+    .gold {
+      color: var(--gold);
+    }
+
+    .hero {
+      min-height: 92vh;
+      display: flex;
+      align-items: center;
+      border-bottom: 1px solid var(--line);
+      padding: 80px 0;
+      position: relative;
+    }
+
+    .hero::before {
+      content: "UNPLUGGED";
+      position: absolute;
+      right: -180px;
+      bottom: 30px;
+      font-size: clamp(80px, 18vw, 220px);
+      font-weight: 900;
+      color: rgba(255,255,255,0.025);
+      pointer-events: none;
+      white-space: nowrap;
+    }
+
+    .hero-content {
+      max-width: 850px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero-sub {
+      max-width: 680px;
+      font-size: clamp(21px, 4vw, 30px);
+      line-height: 1.35;
+      color: var(--white);
+      margin: 25px 0 30px;
+      font-weight: 600;
+    }
+
+    .hero-copy {
       max-width: 650px;
-      margin: 31px 0 15px;
-      font-size: clamp(29px, 7vw, 46px);
-      line-height: 1;
-      letter-spacing: -1.8px;
-    }
-
-    .hero-copy,
-    .copy {
-      max-width: 620px;
-      margin: 0;
-      color: var(--muted);
-      font-size: 13px;
-      line-height: 1.65;
+      margin-bottom: 34px;
     }
 
     .cta {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      min-height: 49px;
-      margin-top: 27px;
-      padding: 0 27px;
+      min-height: 58px;
+      padding: 0 30px;
       background: var(--gold);
-      color: #080808;
-      border-radius: 2px;
-      font-size: 10px;
+      color: #090909;
+      text-decoration: none;
       font-weight: 900;
-      letter-spacing: 1.7px;
-      transition: transform .2s ease, filter .2s ease;
+      letter-spacing: 1px;
+      font-size: 14px;
+      transition: transform .2s ease, background .2s ease;
     }
 
     .cta:hover {
+      background: var(--gold-light);
       transform: translateY(-2px);
-      filter: brightness(1.08);
-    }
-
-    .micro {
-      margin-top: 9px;
-      color: #5e5c56;
-      font-size: 9px;
     }
 
     section {
-      padding: 48px 0;
+      padding: 100px 0;
       border-bottom: 1px solid var(--line);
     }
 
-    .label {
-      margin-bottom: 12px;
+    .section-intro {
+      max-width: 720px;
+      margin-bottom: 48px;
     }
 
-    h3 {
-      margin: 0 0 14px;
-      font-size: clamp(28px, 6vw, 39px);
-      line-height: 1.02;
-      letter-spacing: -1.5px;
-    }
-
-    strong {
-      color: var(--text);
-    }
-
-    .cycle {
-      margin-top: 24px;
-      border: 1px solid var(--line);
-      background: var(--surface);
-    }
-
-    .cycle-row {
-      display: flex;
-      align-items: center;
-      gap: 13px;
-      padding: 14px 15px;
-      border-bottom: 1px solid var(--line);
-    }
-
-    .cycle-row:last-child {
-      border-bottom: 0;
-    }
-
-    .cycle-num {
-      min-width: 23px;
-      color: var(--gold);
-      font-size: 9px;
-      font-weight: 900;
-    }
-
-    .cycle-row span:last-child {
-      color: #aaa79f;
-      font-size: 12px;
+    .section-intro p {
+      font-size: 19px;
     }
 
     .statement {
-      margin-top: 23px;
-      padding: 20px;
-      background: var(--surface);
-      border-left: 2px solid var(--gold);
-    }
-
-    .statement strong {
-      display: block;
-      margin-bottom: 6px;
-      color: var(--gold);
-      font-size: 10px;
-      letter-spacing: 1.5px;
-      text-transform: uppercase;
+      border-left: 3px solid var(--gold);
+      padding: 8px 0 8px 25px;
+      margin: 40px 0;
     }
 
     .statement p {
-      margin: 0;
-      color: #aaa79f;
-      font-size: 12px;
-      line-height: 1.6;
+      color: var(--white);
+      font-size: clamp(24px, 5vw, 38px);
+      line-height: 1.2;
+      font-weight: 800;
     }
 
-    .three-phase {
+    .pattern {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 7px;
-      margin-top: 25px;
-    }
-
-    .phase {
-      min-height: 190px;
-      padding: 18px 15px;
-      background: var(--surface);
+      grid-template-columns: repeat(5, 1fr);
       border: 1px solid var(--line);
+      margin-top: 50px;
     }
 
-    .phase .days {
-      margin-bottom: 28px;
+    .pattern-item {
+      padding: 25px 18px;
+      border-right: 1px solid var(--line);
+      background: var(--black-2);
+    }
+
+    .pattern-item:last-child {
+      border-right: 0;
+    }
+
+    .pattern-number {
       color: var(--gold);
-      font-size: 9px;
-      font-weight: 900;
-      letter-spacing: 1.5px;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 2px;
+      margin-bottom: 14px;
     }
 
-    .phase h4 {
-      margin: 0 0 8px;
+    .pattern-item h3 {
       font-size: 18px;
-      letter-spacing: -.4px;
     }
 
-    .phase p {
-      margin: 0;
-      color: #7f7d76;
-      font-size: 11px;
-      line-height: 1.55;
+    .pattern-item p {
+      font-size: 14px;
+      line-height: 1.5;
     }
 
-    .tools {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 7px;
-      margin-top: 24px;
-    }
-
-    .tool {
-      padding: 18px;
-      background: var(--surface);
-      border: 1px solid var(--line);
-    }
-
-    .tool h4 {
-      margin: 0 0 7px;
-      font-size: 13px;
-    }
-
-    .tool p {
-      margin: 0;
-      color: #7f7d76;
-      font-size: 11px;
-      line-height: 1.55;
-    }
-
-    .protocol {
-      margin-top: 24px;
+    .system-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 1px;
@@ -270,680 +219,738 @@
       border: 1px solid var(--line);
     }
 
-    .step {
-      padding: 17px 14px;
-      background: var(--bg);
+    .system-card {
+      background: var(--black-2);
+      padding: 34px 26px;
     }
 
-    .step strong {
-      display: block;
-      margin-bottom: 5px;
+    .system-card .phase {
       color: var(--gold);
-      font-size: 10px;
-      letter-spacing: 1.2px;
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: 2px;
+      margin-bottom: 18px;
     }
 
-    .step span {
-      color: #77756e;
-      font-size: 10px;
-      line-height: 1.45;
-    }
-
-    .standard {
-      padding: 62px 0;
-      text-align: center;
-    }
-
-    .standard h3 {
+    .system-card h3 {
+      font-size: 30px;
       margin-bottom: 14px;
-      font-size: clamp(40px, 10vw, 64px);
-      line-height: .87;
     }
 
-    .standard .copy {
-      max-width: 470px;
-      margin: auto;
-    }
-
-    .return-box {
-      margin-top: 24px;
-      padding: 21px;
-      background: var(--surface);
-      border: 1px solid var(--line);
-    }
-
-    .return-box h4 {
-      margin: 0 0 8px;
+    .system-card p {
       font-size: 15px;
     }
 
-    .return-box p {
-      margin: 0;
-      color: #7f7d76;
-      font-size: 11px;
-      line-height: 1.6;
-    }
-
-    .fit {
+    .steps {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 7px;
-      margin-top: 24px;
-    }
-
-    .fit-box {
-      padding: 19px;
-      background: var(--surface);
+      gap: 1px;
+      background: var(--line);
       border: 1px solid var(--line);
     }
 
-    .fit-box h4 {
-      margin: 0 0 8px;
+    .step {
+      display: grid;
+      grid-template-columns: 70px 1fr;
+      gap: 20px;
+      padding: 25px;
+      background: var(--black-2);
+    }
+
+    .step-number {
+      color: var(--gold);
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: 2px;
+      padding-top: 4px;
+    }
+
+    .step h3 {
+      margin-bottom: 5px;
+    }
+
+    .step p {
+      font-size: 15px;
+    }
+
+    .kit-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+    }
+
+    .kit {
+      border: 1px solid var(--line);
+      padding: 25px;
+      background: var(--black-2);
+    }
+
+    .kit h3 {
+      font-size: 20px;
+    }
+
+    .kit p {
       font-size: 14px;
     }
 
-    .fit-box p {
-      margin: 0;
-      color: #7f7d76;
-      font-size: 11px;
-      line-height: 1.55;
+    .protocol {
+      margin-top: 45px;
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 8px;
+    }
+
+    .protocol-item {
+      border-top: 2px solid var(--gold);
+      background: var(--black-2);
+      padding: 22px 14px;
+    }
+
+    .protocol-item strong {
+      display: block;
+      font-size: 14px;
+      letter-spacing: 1px;
+      margin-bottom: 8px;
+    }
+
+    .protocol-item span {
+      display: block;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.45;
+    }
+
+    .truth-box {
+      background: var(--black-2);
+      border: 1px solid var(--line);
+      padding: 45px;
+      margin-top: 45px;
+    }
+
+    .truth-box ul {
+      list-style: none;
+      display: grid;
+      gap: 14px;
+      margin-top: 25px;
+    }
+
+    .truth-box li {
+      color: var(--muted);
+      padding-left: 25px;
+      position: relative;
+    }
+
+    .truth-box li::before {
+      content: "×";
+      position: absolute;
+      left: 0;
+      color: var(--gold);
+      font-weight: 900;
+    }
+
+    .for-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      margin-top: 40px;
+    }
+
+    .for-box {
+      padding: 35px;
+      background: var(--black-2);
+      border: 1px solid var(--line);
+    }
+
+    .for-box h3 {
+      color: var(--gold);
+      margin-bottom: 20px;
+    }
+
+    .for-box ul {
+      list-style: none;
+      display: grid;
+      gap: 12px;
+    }
+
+    .for-box li {
+      color: var(--muted);
+      padding-left: 23px;
+      position: relative;
+    }
+
+    .for-box li::before {
+      position: absolute;
+      left: 0;
+      font-weight: 900;
+    }
+
+    .for-box:first-child li::before {
+      content: "✓";
+      color: var(--gold);
+    }
+
+    .for-box:last-child li::before {
+      content: "×";
+      color: var(--muted);
     }
 
     .faq {
-      margin-top: 18px;
+      margin-top: 40px;
+      border-top: 1px solid var(--line);
     }
 
     details {
-      border-top: 1px solid var(--line);
-      padding: 16px 0;
-    }
-
-    details:last-child {
       border-bottom: 1px solid var(--line);
+      padding: 22px 0;
     }
 
     summary {
       cursor: pointer;
+      color: var(--white);
+      font-weight: 800;
+      font-size: 17px;
       list-style: none;
-      font-size: 12px;
-      font-weight: 700;
+      position: relative;
+      padding-right: 30px;
     }
 
     summary::-webkit-details-marker {
       display: none;
     }
 
+    summary::after {
+      content: "+";
+      position: absolute;
+      right: 0;
+      color: var(--gold);
+      font-size: 22px;
+    }
+
+    details[open] summary::after {
+      content: "−";
+    }
+
     details p {
-      max-width: 620px;
-      margin: 9px 0 0;
-      color: #77756e;
-      font-size: 11px;
-      line-height: 1.6;
+      padding-top: 15px;
+      max-width: 720px;
+      font-size: 15px;
     }
 
     .final {
-      padding: 63px 0 70px;
-      border-bottom: 0;
       text-align: center;
+      padding: 120px 0;
+      border-bottom: 0;
     }
 
-    .final h3 {
-      max-width: 620px;
-      margin: 0 auto 14px;
-      font-size: clamp(34px, 8vw, 55px);
+    .final h2 {
+      max-width: 800px;
+      margin: 0 auto 25px;
     }
 
-    .final .copy {
-      max-width: 470px;
-      margin: auto;
+    .final p {
+      max-width: 650px;
+      margin: 0 auto 35px;
+      font-size: 19px;
+    }
+
+    .final-line {
+      color: var(--gold);
+      font-size: clamp(25px, 5vw, 42px);
+      font-weight: 900;
+      line-height: 1.15;
+      margin: 45px auto 0;
+      max-width: 650px;
     }
 
     footer {
-      padding: 24px 0 32px;
-      color: #4b4944;
+      border-top: 1px solid var(--line);
+      padding: 35px 0;
       text-align: center;
-      font-size: 8px;
-      font-weight: 800;
-      letter-spacing: 1.5px;
     }
 
-    @media (max-width: 560px) {
-      .page {
-        width: min(calc(100% - 24px), var(--max));
+    footer p {
+      font-size: 12px;
+      letter-spacing: 1px;
+      color: #777;
+    }
+
+    @media (max-width: 760px) {
+      .wrap {
+        width: min(calc(100% - 30px), var(--max));
       }
 
       .hero {
-        padding: 41px 0 48px;
+        min-height: auto;
+        padding: 85px 0 75px;
+      }
+
+      h1 {
+        letter-spacing: -3px;
       }
 
       section {
-        padding: 39px 0;
+        padding: 75px 0;
       }
 
-      .three-phase {
+      .pattern {
         grid-template-columns: 1fr;
       }
 
-      .phase {
-        min-height: auto;
+      .pattern-item {
+        border-right: 0;
+        border-bottom: 1px solid var(--line);
       }
 
-      .phase .days {
-        margin-bottom: 13px;
+      .pattern-item:last-child {
+        border-bottom: 0;
       }
 
-      .tools {
+      .system-grid {
         grid-template-columns: 1fr;
       }
 
       .protocol {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: repeat(2, 1fr);
       }
 
-      .fit {
+      .kit-grid,
+      .for-grid {
         grid-template-columns: 1fr;
+      }
+
+      .truth-box {
+        padding: 30px 24px;
+      }
+
+      .step {
+        grid-template-columns: 48px 1fr;
+        padding: 22px 18px;
       }
 
       .cta {
         width: 100%;
       }
     }
-  </style></head><body>  <main class="page"><div class="brand">🔱 THE BRAVO</div>
 
-<!-- HERO -->
-<header class="hero">
+    @media (max-width: 430px) {
+      .protocol {
+        grid-template-columns: 1fr;
+      }
 
-  <div class="eyebrow">THE BRAVO · 90-DAY OPERATING SYSTEM</div>
+      .hero-sub {
+        font-size: 20px;
+      }
 
-  <h1>UNPLUGGED</h1>
+      p {
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
 
-  <div class="subtitle">
-    A 90-Day Operating System to Break Free from Pornography
-  </div>
+<body>
 
-  <h2>
-    You already made the promise.<br>
-    Now build the system.
-  </h2>
+  <!-- HERO -->
+  <header class="hero">
+    <div class="wrap hero-content">
 
-  <p class="hero-copy">
-    You know the pattern. A trigger. A private screen. An urge.
-    A compromise. Then the same promise again.
-    UNPLUGGED gives you a practical system to understand the loop,
-    change your environment, handle urges, replace the job of the habit,
-    and recover quickly when something goes wrong.
-  </p>
+      <div class="eyebrow">The Bravo · Unplugged</div>
 
-  <a
-    class="cta"
-    href="https://thebrav0.gumroad.com/l/Unplugged"
-  >
-    GET UNPLUGGED
-  </a>
+      <h1>YOU KEEP<br>SAYING<br><span class="gold">YOU'RE DONE.</span></h1>
 
-  <div class="micro">
-    50-page digital guide · DETOX · REBUILD · THRIVE
-  </div>
-
-</header>
-
-
-<!-- THE PATTERN -->
-<section>
-
-  <div class="label">01 — THE PATTERN</div>
-
-  <h3>
-    The problem isn't another promise.
-  </h3>
-
-  <p class="copy">
-    You can genuinely mean it when you say you're done.
-    Then tiredness, stress, boredom, loneliness, anger, rejection,
-    or the wrong environment opens the same door again.
-  </p>
-
-  <div class="cycle">
-
-    <div class="cycle-row">
-      <span class="cycle-num">01</span>
-      <span>Trigger</span>
-    </div>
-
-    <div class="cycle-row">
-      <span class="cycle-num">02</span>
-      <span>Access</span>
-    </div>
-
-    <div class="cycle-row">
-      <span class="cycle-num">03</span>
-      <span>Urge</span>
-    </div>
-
-    <div class="cycle-row">
-      <span class="cycle-num">04</span>
-      <span>Action</span>
-    </div>
-
-    <div class="cycle-row">
-      <span class="cycle-num">05</span>
-      <span>Aftermath</span>
-    </div>
-
-  </div>
-
-  <div class="statement">
-    <strong>The Bravo Circuit</strong>
-    <p>
-      UNPLUGGED teaches you to recognize the route early enough
-      to change what happens next—not simply promise harder.
-    </p>
-  </div>
-
-</section>
-
-
-<!-- SYSTEM -->
-<section>
-
-  <div class="label">02 — THE SYSTEM</div>
-
-  <h3>
-    DETOX. REBUILD. THRIVE.
-  </h3>
-
-  <p class="copy">
-    Ninety days gives you a structured period to practice the system.
-    It is not presented as a biological countdown or a guaranteed finish line.
-  </p>
-
-  <div class="three-phase">
-
-    <div class="phase">
-      <div class="days">DAYS 1–30</div>
-      <h4>DETOX</h4>
-      <p>
-        Interrupt the old route. Strengthen the environment.
-        Identify triggers. Catch first compromises earlier.
+      <p class="hero-sub">
+        Then the same trigger hits. The same screen is there. And you do it again.
       </p>
-    </div>
 
-    <div class="phase">
-      <div class="days">DAYS 31–60</div>
-      <h4>REBUILD</h4>
-      <p>
-        Replace the job. Rebuild your day.
-        Strengthen connection and learn to operate under pressure.
+      <p class="hero-copy">
+        You don't need another promise.
+        <strong>You need a system.</strong>
+        UNPLUGGED is a 90-day operating system built to help you break the cycle by changing the pattern around the behavior—not by asking you to magically become stronger.
       </p>
+
+      <a class="cta" href="https://thebrav0.gumroad.com/l/Unplugged">
+        GET UNPLUGGED
+      </a>
+
     </div>
+  </header>
 
-    <div class="phase">
-      <div class="days">DAYS 61–90</div>
-      <h4>THRIVE</h4>
+
+  <!-- SECTION 1 -->
+  <section>
+    <div class="wrap">
+
+      <div class="eyebrow">01 · Be Honest</div>
+
+      <div class="section-intro">
+        <h2>YOU KNOW<br>THE PATTERN.</h2>
+        <p>
+          You've probably told yourself, <strong>"This is the last time."</strong>
+          Then stress hits. Boredom hits. Loneliness hits. You're tired. You're angry.
+          You're alone with a screen.
+        </p>
+      </div>
+
+      <div class="statement">
+        <p>
+          You keep trying to win the same fight with the same setup.
+        </p>
+      </div>
+
       <p>
-        Own the standard. Use reclaimed attention.
-        Invest in relationships and prepare for Day 91.
+        UNPLUGGED makes you attack the setup instead.
       </p>
+
     </div>
-
-  </div>
-
-</section>
+  </section>
 
 
-<!-- WHAT IT TEACHES -->
-<section>
+  <!-- SECTION 2 -->
+  <section>
+    <div class="wrap">
 
-  <div class="label">03 — WHAT YOU'LL WORK ON</div>
+      <div class="eyebrow">02 · The Pattern</div>
 
-  <h3>
-    Stop fighting the moment. Build before it arrives.
-  </h3>
+      <h2>THE HABIT HAS<br>A PATTERN.</h2>
 
-  <p class="copy">
-    The guide takes you from understanding the pattern to changing
-    the environment around it and building a response you can actually repeat.
-  </p>
-
-  <div class="tools">
-
-    <div class="tool">
-      <h4>Understand the loop</h4>
-      <p>
-        Map triggers, recurring contexts, danger hours,
-        first compromises, and the job the habit may be doing.
+      <p class="section-intro">
+        The goal is not to wait until you're already overwhelmed.
+        Learn where the chain starts—and where to break it.
       </p>
+
+      <div class="pattern">
+
+        <div class="pattern-item">
+          <div class="pattern-number">01</div>
+          <h3>TRIGGER</h3>
+          <p>Something sets the pattern in motion.</p>
+        </div>
+
+        <div class="pattern-item">
+          <div class="pattern-number">02</div>
+          <h3>ACCESS</h3>
+          <p>The path to the behavior stays easy.</p>
+        </div>
+
+        <div class="pattern-item">
+          <div class="pattern-number">03</div>
+          <h3>URGE</h3>
+          <p>The urge builds and demands attention.</p>
+        </div>
+
+        <div class="pattern-item">
+          <div class="pattern-number">04</div>
+          <h3>ACT</h3>
+          <p>The automatic response takes over.</p>
+        </div>
+
+        <div class="pattern-item">
+          <div class="pattern-number">05</div>
+          <h3>AFTERMATH</h3>
+          <p>Regret. Frustration. Another promise.</p>
+        </div>
+
+      </div>
+
+      <div class="statement">
+        <p>
+          The cycle doesn't need another promise. It needs a point of interruption.
+        </p>
+      </div>
+
     </div>
+  </section>
 
-    <div class="tool">
-      <h4>Change the environment</h4>
-      <p>
-        Remove access, add barriers, create distance,
-        reduce privacy, and make the next good decision easier.
-      </p>
+
+  <!-- SECTION 3 -->
+  <section>
+    <div class="wrap">
+
+      <div class="eyebrow">03 · Change The Setup</div>
+
+      <h2>STOP RELYING<br>ON WILLPOWER.</h2>
+
+      <div class="section-intro">
+        <p>
+          Willpower is not a system. So UNPLUGGED starts where the pattern actually lives:
+          <strong>your environment, your routines, your triggers, and your responses.</strong>
+        </p>
+      </div>
+
+      <div class="steps">
+
+        <div class="step">
+          <div class="step-number">01</div>
+          <div>
+            <h3>REMOVE</h3>
+            <p>Remove obvious sources of access that keep the old path easy.</p>
+          </div>
+        </div>
+
+        <div class="step">
+          <div class="step-number">02</div>
+          <div>
+            <h3>BLOCK</h3>
+            <p>Close weak points before you're under pressure.</p>
+          </div>
+        </div>
+
+        <div class="step">
+          <div class="step-number">03</div>
+          <div>
+            <h3>DISTANCE</h3>
+            <p>Create space between the trigger and the automatic response.</p>
+          </div>
+        </div>
+
+        <div class="step">
+          <div class="step-number">04</div>
+          <div>
+            <h3>REDUCE PRIVACY</h3>
+            <p>Change situations where privacy keeps feeding the pattern.</p>
+          </div>
+        </div>
+
+        <div class="step">
+          <div class="step-number">05</div>
+          <div>
+            <h3>DELAY</h3>
+            <p>Interrupt the automatic response instead of instantly obeying it.</p>
+          </div>
+        </div>
+
+        <div class="step">
+          <div class="step-number">06</div>
+          <div>
+            <h3>REPLACE</h3>
+            <p>Build a better response that actually fits what the habit was doing for you.</p>
+          </div>
+        </div>
+
+      </div>
+
     </div>
+  </section>
 
-    <div class="tool">
-      <h4>Build replacements</h4>
-      <p>
-        Match triggers and underlying needs with responses
-        that give your day somewhere better to go.
+
+  <!-- SECTION 4 -->
+  <section>
+    <div class="wrap">
+
+      <div class="eyebrow">04 · When The Urge Hits</div>
+
+      <h2>YOU NEED A PLAN.<br>NOT A SPEECH.</h2>
+
+      <p class="section-intro">
+        When the urge hits, you don't need to feel powerful first.
+        You need to know what to do.
       </p>
+
+      <div class="protocol">
+
+        <div class="protocol-item">
+          <strong>NOTICE</strong>
+          <span>Catch what is happening.</span>
+        </div>
+
+        <div class="protocol-item">
+          <strong>NAME</strong>
+          <span>Identify the trigger.</span>
+        </div>
+
+        <div class="protocol-item">
+          <strong>DISTANCE</strong>
+          <span>Break the automatic path.</span>
+        </div>
+
+        <div class="protocol-item">
+          <strong>DELAY</strong>
+          <span>Create space before acting.</span>
+        </div>
+
+        <div class="protocol-item">
+          <strong>REDIRECT</strong>
+          <span>Move toward a useful replacement.</span>
+        </div>
+
+        <div class="protocol-item">
+          <strong>REVIEW</strong>
+          <span>Learn instead of repeating blindly.</span>
+        </div>
+
+      </div>
+
+      <div class="statement">
+        <p>
+          You don't need to win the entire future. You need to handle the next decision.
+        </p>
+      </div>
+
     </div>
+  </section>
 
-    <div class="tool">
-      <h4>Handle urges</h4>
-      <p>
-        Use a six-step protocol instead of negotiating
-        with yourself in the middle of the moment.
-      </p>
+
+  <!-- SECTION 5 -->
+  <section>
+    <div class="wrap">
+
+      <div class="eyebrow">05 · The 90-Day Operating System</div>
+
+      <h2>90 DAYS.<br>THREE PHASES.<br>ONE STANDARD.</h2>
+
+      <div class="system-grid">
+
+        <div class="system-card">
+          <div class="phase">DAYS 1–30</div>
+          <h3>DETOX</h3>
+          <p>
+            Interrupt the old pattern. Close weak points. Protect your danger hours.
+            Change the environment. Make the new standard ordinary.
+          </p>
+        </div>
+
+        <div class="system-card">
+          <div class="phase">DAYS 31–60</div>
+          <h3>REBUILD</h3>
+          <p>
+            Replace what the habit was doing for you. Rebuild your days.
+            Strengthen connection. Learn to handle pressure without automatically escaping.
+          </p>
+        </div>
+
+        <div class="system-card">
+          <div class="phase">DAYS 61–90</div>
+          <h3>THRIVE</h3>
+          <p>
+            Own your standard. Use your reclaimed attention somewhere better.
+            Strengthen relationships. Raise your standards. Prepare for Day 91.
+          </p>
+        </div>
+
+      </div>
+
     </div>
-
-  </div>
-
-</section>
+  </section>
 
 
-<!-- URGE PROTOCOL -->
-<section>
+  <!-- SECTION 6 -->
+  <section>
+    <div class="wrap">
 
-  <div class="label">04 — THE URGE PROTOCOL</div>
+      <div class="eyebrow">06 · The Field Kit</div>
 
-  <h3>
-    Know what to do when the moment gets loud.
-  </h3>
+      <h2>THIS ISN'T<br>JUST A PDF.</h2>
 
-  <p class="copy">
-    UNPLUGGED gives you a simple sequence to rehearse while calm
-    and use when an urge appears.
-  </p>
+      <p class="section-intro">
+        UNPLUGGED gives you practical tools you can return to when the situation gets difficult.
+      </p>
 
-  <div class="protocol">
+      <div class="kit-grid">
 
-    <div class="step">
-      <strong>NOTICE</strong>
-      <span>Catch it early.</span>
+        <div class="kit">
+          <h3>Emergency Card</h3>
+          <p>Keep the core response close when you're under pressure.</p>
+        </div>
+
+        <div class="kit">
+          <h3>Trigger Map</h3>
+          <p>See the situations that repeatedly set the cycle in motion.</p>
+        </div>
+
+        <div class="kit">
+          <h3>If-Then Plan</h3>
+          <p>Decide your response before the moment arrives.</p>
+        </div>
+
+        <div class="kit">
+          <h3>Replacement Menu</h3>
+          <p>Stop removing the habit without replacing its job.</p>
+        </div>
+
+        <div class="kit">
+          <h3>90-Day Scorecard</h3>
+          <p>Track the behaviors that support the standard you're building.</p>
+        </div>
+
+        <div class="kit">
+          <h3>Day-by-Day Tracker</h3>
+          <p>Turn the system into something you practice instead of something you merely read.</p>
+        </div>
+
+      </div>
+
     </div>
+  </section>
 
-    <div class="step">
-      <strong>NAME</strong>
-      <span>Identify what's happening.</span>
+
+  <!-- SECTION 7 -->
+  <section>
+    <div class="wrap">
+
+      <div class="eyebrow">07 · When Things Go Wrong</div>
+
+      <h2>IF YOU SLIP,<br>DON'T DISAPPEAR.</h2>
+
+      <p class="section-intro">
+        A lapse does not need to become a spiral.
+        UNPLUGGED gives you a <strong>24-Hour Return</strong> so you can respond instead of turning one event into a larger pattern.
+      </p>
+
+      <div class="statement">
+        <p>
+          The goal isn't worshipping a streak. The goal is building a standard you return to.
+        </p>
+      </div>
+
     </div>
+  </section>
 
-    <div class="step">
-      <strong>DISTANCE</strong>
-      <span>Create space.</span>
+
+  <!-- SECTION 8 -->
+  <section>
+    <div class="wrap">
+
+      <div class="eyebrow">08 · No Bullshit Promises</div>
+
+      <h2>NO MAGIC.<br>NO GUARANTEES.</h2>
+
+      <p class="section-intro">
+        UNPLUGGED does not promise a magical brain reset, a guaranteed 90-day transformation,
+        a perfect streak, or a life without urges.
+      </p>
+
+      <div class="truth-box">
+
+        <h3>WHAT THE 90 DAYS ACTUALLY ARE</h3>
+
+        <p>
+          A practical operating system—not a biological finish line.
+        </p>
+
+        <ul>
+          <li>No brain-reset deadline.</li>
+          <li>No flatline promise.</li>
+          <li>No guarantee.</li>
+          <li>No pretending that motivation alone fixes the pattern.</li>
+        </ul>
+
+      </div>
+
     </div>
+  </section>
 
-    <div class="step">
-      <strong>DELAY</strong>
-      <span>Don't decide immediately.</span>
-    </div>
 
-    <div class="step">
-      <strong>REDIRECT</strong>
-      <span>Use the replacement.</span>
-    </div>
+  <!-- SECTION 9 -->
+  <section>
+    <div class="wrap">
 
-    <div class="step">
-      <strong>REVIEW</strong>
-      <span>Learn from the moment.</span>
-    </div>
+      <div class="eyebrow">09 · Is This For You?</div>
 
-  </div>
+      <h2>BE HONEST BEFORE<br>YOU BUY IT.</h2>
 
-</section>
+      <div class="for-grid">
 
+        <div class="for-box">
+          <h3>THIS IS FOR YOU IF...</h3>
 
-<!-- FIELD KIT -->
-<section>
-
-  <div class="label">05 — THE FIELD KIT</div>
-
-  <h3>
-    Not just something you read.
-  </h3>
-
-  <p class="copy">
-    The guide includes practical tools you can use throughout the 90 days,
-    so the system doesn't live only inside the pages.
-  </p>
-
-  <div class="tools">
-
-    <div class="tool">
-      <h4>Emergency Card</h4>
-      <p>
-        A compact reference for the six-step Urge Protocol.
-      </p>
-    </div>
-
-    <div class="tool">
-      <h4>Trigger Map</h4>
-      <p>
-        Track triggers, situations, first compromises, and patterns.
-      </p>
-    </div>
-
-    <div class="tool">
-      <h4>If-Then Plan</h4>
-      <p>
-        Decide your response before the situation arrives.
-      </p>
-    </div>
-
-    <div class="tool">
-      <h4>Replacement Menu</h4>
-      <p>
-        Build practical alternatives around the needs behind the habit.
-      </p>
-    </div>
-
-    <div class="tool">
-      <h4>90-Day Scorecard</h4>
-      <p>
-        Measure environment, awareness, recovery, structure,
-        connection, and other areas of the system.
-      </p>
-    </div>
-
-    <div class="tool">
-      <h4>Day-by-Day Tracker</h4>
-      <p>
-        Follow the 90-day structure and keep the daily standard visible.
-      </p>
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- STANDARD -->
-<section class="standard">
-
-  <div class="label">06 — THE STANDARD</div>
-
-  <h3>
-    Standard.<br>
-    Not streak.
-  </h3>
-
-  <p class="copy">
-    The goal isn't to obsess over a number.
-    It's to build repeated evidence through your actions,
-    your environment, your recovery, and the standards you keep.
-  </p>
-
-</section>
-
-
-<!-- RECOVERY -->
-<section>
-
-  <div class="label">07 — WHEN YOU SLIP</div>
-
-  <h3>
-    Don't turn one bad moment into a bad week.
-  </h3>
-
-  <p class="copy">
-    UNPLUGGED separates the lapse from the spiral.
-    When something goes wrong, the answer isn't to disappear,
-    make another dramatic promise, or abandon the system.
-  </p>
-
-  <div class="return-box">
-
-    <h4>THE 24-HOUR RETURN</h4>
-
-    <p>
-      Stop the spiral. Create distance. Identify the chain.
-      Repair the weak point. Return to your structure.
-      Keep the standard moving forward.
-    </p>
-
-  </div>
-
-</section>
-
-
-<!-- FIT -->
-<section>
-
-  <div class="label">08 — IS IT FOR YOU?</div>
-
-  <h3>
-    Know what you're getting.
-  </h3>
-
-  <div class="fit">
-
-    <div class="fit-box">
-      <h4>For you if</h4>
-      <p>
-        You're tired of repeating the same pattern and want
-        a structured, practical system you can actually work through.
-      </p>
-    </div>
-
-    <div class="fit-box">
-      <h4>Not for you if</h4>
-      <p>
-        You're looking for a magic button, guaranteed results,
-        or something that removes the need for your own decisions.
-      </p>
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- FAQ -->
-<section>
-
-  <div class="label">FAQ</div>
-
-  <h3>
-    Before you start.
-  </h3>
-
-  <div class="faq">
-
-    <details>
-      <summary>How long is the guide?</summary>
-      <p>
-        UNPLUGGED is a 50-page digital guide built around a 90-day
-        operating system.
-      </p>
-    </details>
-
-    <details>
-      <summary>Why 90 days?</summary>
-      <p>
-        Ninety days is a practical operating period for sustained practice.
-        The guide does not present it as a biological finish line.
-      </p>
-    </details>
-
-    <details>
-      <summary>What if I've tried quitting before?</summary>
-      <p>
-        The guide isn't built around simply trying harder.
-        It focuses on triggers, access, environment, first compromises,
-        urges, replacement, structure, and recovery.
-      </p>
-    </details>
-
-    <details>
-      <summary>What happens if I slip?</summary>
-      <p>
-        UNPLUGGED includes a 24-Hour Return designed to help you
-        interrupt the spiral, identify what happened, repair a weak point,
-        and return to the system.
-      </p>
-    </details>
-
-    <details>
-      <summary>Does UNPLUGGED guarantee results?</summary>
-      <p>
-        No. The guide makes no guarantee. It gives you a practical system
-        to work, while the decisions and actions remain yours.
-      </p>
-    </details>
-
-    <details>
-      <summary>What happens after Day 90?</summary>
-      <p>
-        The guide includes a Day 91 Plan to move from program mode
-        into sustainable practice, keeping the rules, protections,
-        recovery response, and priorities that still serve you.
-      </p>
-    </details>
-
-    <details>
-      <summary>Is this professional treatment?</summary>
-      <p>
-        No. UNPLUGGED is a self-guided educational resource.
-        The guide also explains when professional support may be appropriate.
-      </p>
-    </details>
-
-  </div>
-
-</section>
-
-
-<!-- FINAL CTA -->
-<section class="final">
-
-  <div class="label">START HERE</div>
-
-  <h3>
-    Stop making the same deal with yourself.
-  </h3>
-
-  <p class="copy">
-    Understand the pattern.<br>
-    Change the environment.<br>
-    Handle the moment.<br>
-    Rebuild your standard.
-  </p>
-
-  <a
-    class="cta"
-    href="https://thebrav0.gumroad.com/l/Unplugged"
-  >
-    GET UNPLUGGED
-  </a>
-
-</section>
-
-
-<footer>
-  🔱 THE BRAVO · RECLAIMING THE ESSENCE OF MASCULINITY
-</footer>
-
-  </main></body>
-        </html>
+          <ul>
+            <li>You're tired of making the same promi
