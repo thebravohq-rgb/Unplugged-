@@ -3,357 +3,395 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="robots" content="noindex">
+  <meta name="robots" content="index, follow">
   <meta name="description" content="UNPLUGGED — A Practical Guide to Quitting Pornography by The Bravo.">
+  <meta property="og:title" content="UNPLUGGED — The Bravo">
+  <meta property="og:description" content="A practical guide to quitting pornography and rebuilding your standards.">
   <title>UNPLUGGED — The Bravo</title>
 
   <style>
-    :root{
-      --bg:#090909;
-      --panel:#111111;
-      --line:#242424;
-      --text:#f2f0eb;
-      --muted:#9a9892;
-      --gold:#c49a4a;
-      --max:760px;
+    :root {
+      --bg: #090909;
+      --surface: #101010;
+      --surface-2: #151515;
+      --line: #252525;
+      --text: #f1efe9;
+      --muted: #92908a;
+      --gold: #c49a4a;
+      --max: 760px;
     }
 
-    *{box-sizing:border-box}
-
-    html{
-      scroll-behavior:smooth;
+    * {
+      box-sizing: border-box;
     }
 
-    body{
-      margin:0;
-      background:var(--bg);
-      color:var(--text);
-      font-family:Arial,Helvetica,sans-serif;
-      line-height:1.55;
-      -webkit-font-smoothing:antialiased;
+    html {
+      scroll-behavior: smooth;
     }
 
-    a{
-      color:inherit;
-      text-decoration:none;
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
     }
 
-    .page{
-      width:min(100% - 32px,var(--max));
-      margin:auto;
+    a {
+      color: inherit;
+      text-decoration: none;
     }
 
-    .brand{
-      padding:22px 0 10px;
-      font-size:11px;
-      font-weight:700;
-      letter-spacing:2px;
-      color:var(--gold);
+    .page {
+      width: min(calc(100% - 28px), var(--max));
+      margin: 0 auto;
     }
 
-    .hero{
-      padding:48px 0 55px;
-      border-bottom:1px solid var(--line);
+    /* BRAND */
+
+    .brand {
+      padding: 22px 0 8px;
+      color: var(--gold);
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 2.2px;
     }
 
-    .eyebrow{
-      font-size:10px;
-      letter-spacing:2.5px;
-      color:var(--muted);
-      text-transform:uppercase;
-      margin-bottom:15px;
+    /* HERO */
+
+    .hero {
+      padding: 48px 0 52px;
+      border-bottom: 1px solid var(--line);
     }
 
-    h1{
-      margin:0;
-      font-size:clamp(48px,13vw,86px);
-      line-height:.88;
-      letter-spacing:-3px;
-      font-weight:900;
+    .eyebrow,
+    .number {
+      color: var(--gold);
+      font-size: 9px;
+      font-weight: 800;
+      letter-spacing: 2px;
+      text-transform: uppercase;
     }
 
-    .subtitle{
-      margin:18px 0 0;
-      color:var(--muted);
-      font-size:14px;
+    .eyebrow {
+      margin-bottom: 14px;
     }
 
-    .hero h2{
-      max-width:570px;
-      margin:30px 0 12px;
-      font-size:clamp(25px,6vw,40px);
-      line-height:1.05;
-      letter-spacing:-1.3px;
+    h1 {
+      margin: 0;
+      font-size: clamp(52px, 14vw, 88px);
+      line-height: .86;
+      letter-spacing: -4px;
+      font-weight: 900;
     }
 
-    .hero p{
-      max-width:520px;
-      color:#aaa8a2;
-      font-size:14px;
-      margin:0;
+    .subtitle {
+      margin-top: 16px;
+      color: var(--muted);
+      font-size: 13px;
     }
 
-    .cta{
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      margin-top:27px;
-      min-height:48px;
-      padding:0 25px;
-      background:var(--gold);
-      color:#080808;
-      font-size:11px;
-      font-weight:900;
-      letter-spacing:1.4px;
-      border-radius:2px;
-      transition:.2s ease;
+    .hero h2 {
+      max-width: 590px;
+      margin: 28px 0 12px;
+      font-size: clamp(25px, 6vw, 39px);
+      line-height: 1.02;
+      letter-spacing: -1.5px;
     }
 
-    .cta:hover{
-      transform:translateY(-2px);
-      filter:brightness(1.08);
+    .hero-copy {
+      max-width: 540px;
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
     }
 
-    .reassurance{
-      margin-top:10px;
-      color:#696762;
-      font-size:10px;
+    /* CTA */
+
+    .cta {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 47px;
+      margin-top: 25px;
+      padding: 0 25px;
+      background: var(--gold);
+      color: #080808;
+      border-radius: 2px;
+      font-size: 10px;
+      font-weight: 900;
+      letter-spacing: 1.5px;
+      transition: .2s ease;
     }
 
-    section{
-      padding:46px 0;
-      border-bottom:1px solid var(--line);
+    .cta:hover {
+      transform: translateY(-2px);
+      filter: brightness(1.08);
     }
 
-    .number{
-      color:var(--gold);
-      font-size:10px;
-      letter-spacing:2px;
-      font-weight:700;
-      margin-bottom:12px;
+    .reassurance {
+      margin-top: 9px;
+      color: #5f5d58;
+      font-size: 9px;
     }
 
-    h3{
-      margin:0 0 13px;
-      font-size:27px;
-      line-height:1.05;
-      letter-spacing:-1px;
+    /* SECTIONS */
+
+    section {
+      padding: 42px 0;
+      border-bottom: 1px solid var(--line);
     }
 
-    section > p{
-      max-width:620px;
-      margin:0;
-      color:var(--muted);
-      font-size:14px;
+    .number {
+      margin-bottom: 11px;
     }
 
-    .problem{
-      margin-top:24px;
-      display:grid;
-      gap:8px;
+    h3 {
+      margin: 0 0 12px;
+      font-size: 27px;
+      line-height: 1.04;
+      letter-spacing: -1.1px;
     }
 
-    .problem div{
-      padding:13px 15px;
-      border-left:2px solid #292929;
-      background:#0d0d0d;
-      color:#c4c1ba;
-      font-size:13px;
+    .section-copy {
+      max-width: 620px;
+      margin: 0;
+      color: var(--muted);
+      font-size: 13px;
     }
 
-    .gold{
-      color:var(--gold);
+    /* PROBLEM */
+
+    .problem {
+      display: grid;
+      gap: 7px;
+      margin-top: 22px;
     }
 
-    .framework{
-      display:grid;
-      grid-template-columns:repeat(3,1fr);
-      gap:8px;
-      margin-top:25px;
+    .problem div {
+      padding: 12px 14px;
+      background: var(--surface);
+      border-left: 2px solid #292929;
+      color: #b9b6af;
+      font-size: 12px;
     }
 
-    .card{
-      padding:20px 15px;
-      background:var(--panel);
-      border:1px solid var(--line);
+    /* FRAMEWORK */
+
+    .framework {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 7px;
+      margin-top: 23px;
     }
 
-    .card span{
-      display:block;
-      color:var(--gold);
-      font-size:10px;
-      letter-spacing:1.5px;
-      margin-bottom:10px;
-      font-weight:700;
+    .card {
+      min-height: 150px;
+      padding: 17px 14px;
+      background: var(--surface);
+      border: 1px solid var(--line);
     }
 
-    .card strong{
-      display:block;
-      font-size:17px;
-      margin-bottom:6px;
+    .card span {
+      display: block;
+      margin-bottom: 10px;
+      color: var(--gold);
+      font-size: 9px;
+      font-weight: 800;
+      letter-spacing: 1.5px;
     }
 
-    .card p{
-      margin:0;
-      color:#85837d;
-      font-size:12px;
-      line-height:1.45;
+    .card strong {
+      display: block;
+      margin-bottom: 7px;
+      font-size: 16px;
     }
 
-    .inside{
-      margin-top:24px;
-      display:grid;
-      gap:1px;
-      background:var(--line);
-      border:1px solid var(--line);
+    .card p {
+      margin: 0;
+      color: #7f7d77;
+      font-size: 11px;
+      line-height: 1.45;
     }
 
-    .inside div{
-      background:var(--bg);
-      padding:14px 15px;
-      display:flex;
-      justify-content:space-between;
-      gap:15px;
-      font-size:13px;
+    /* INSIDE */
+
+    .inside {
+      display: grid;
+      margin-top: 22px;
+      background: var(--line);
+      border: 1px solid var(--line);
+      gap: 1px;
     }
 
-    .inside span{
-      color:#77756f;
-      text-align:right;
+    .inside div {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 13px 14px;
+      background: var(--bg);
+      font-size: 12px;
     }
 
-    .standard{
-      padding:52px 0;
-      text-align:center;
+    .inside span {
+      color: #707069;
+      text-align: right;
     }
 
-    .standard h3{
-      font-size:clamp(32px,8vw,54px);
-      margin-bottom:12px;
+    /* STANDARD */
+
+    .standard {
+      padding: 50px 0;
+      text-align: center;
     }
 
-    .standard p{
-      margin:auto;
-      max-width:470px;
+    .standard h3 {
+      margin-bottom: 10px;
+      font-size: clamp(34px, 8vw, 54px);
+      line-height: .94;
     }
 
-    .split{
-      display:grid;
-      grid-template-columns:1fr 1fr;
-      gap:8px;
-      margin-top:24px;
+    .standard .section-copy {
+      max-width: 440px;
+      margin: auto;
     }
 
-    .split div{
-      padding:20px;
-      border:1px solid var(--line);
-      background:var(--panel);
+    /* FIT */
+
+    .fit {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 7px;
+      margin-top: 22px;
     }
 
-    .split strong{
-      display:block;
-      margin-bottom:8px;
-      font-size:14px;
+    .fit-box {
+      padding: 18px;
+      background: var(--surface);
+      border: 1px solid var(--line);
     }
 
-    .split p{
-      margin:0;
-      color:#85837d;
-      font-size:12px;
+    .fit-box strong {
+      display: block;
+      margin-bottom: 7px;
+      font-size: 13px;
     }
 
-    .price{
-      margin-top:22px;
-      font-size:34px;
-      font-weight:900;
-      letter-spacing:-1px;
+    .fit-box p {
+      margin: 0;
+      color: #7f7d77;
+      font-size: 11px;
+      line-height: 1.5;
     }
 
-    .faq{
-      margin-top:22px;
+    /* PRICE */
+
+    .price {
+      margin-top: 20px;
+      font-size: 30px;
+      font-weight: 900;
+      letter-spacing: -1px;
     }
 
-    details{
-      border-top:1px solid var(--line);
-      padding:15px 0;
+    /* FAQ */
+
+    .faq {
+      margin-top: 18px;
     }
 
-    summary{
-      cursor:pointer;
-      list-style:none;
-      font-size:13px;
-      font-weight:700;
+    details {
+      border-top: 1px solid var(--line);
+      padding: 14px 0;
     }
 
-    summary::-webkit-details-marker{
-      display:none;
+    summary {
+      cursor: pointer;
+      list-style: none;
+      font-size: 12px;
+      font-weight: 700;
     }
 
-    details p{
-      margin:9px 0 0;
-      color:#85837d;
-      font-size:12px;
-      max-width:600px;
+    summary::-webkit-details-marker {
+      display: none;
     }
 
-    .final{
-      text-align:center;
-      padding:60px 0 70px;
-      border-bottom:0;
+    details p {
+      max-width: 600px;
+      margin: 8px 0 0;
+      color: #7f7d77;
+      font-size: 11px;
+      line-height: 1.5;
     }
 
-    .final h3{
-      font-size:clamp(31px,8vw,52px);
-      max-width:580px;
-      margin:0 auto 12px;
+    /* FINAL */
+
+    .final {
+      padding: 58px 0 65px;
+      border-bottom: 0;
+      text-align: center;
     }
 
-    .final p{
-      margin:auto;
-      max-width:440px;
+    .final h3 {
+      max-width: 570px;
+      margin: 0 auto 11px;
+      font-size: clamp(31px, 8vw, 51px);
     }
 
-    footer{
-      padding:25px 0 35px;
-      text-align:center;
-      color:#55534e;
-      font-size:9px;
-      letter-spacing:1.5px;
+    .final .section-copy {
+      max-width: 430px;
+      margin: auto;
     }
 
-    @media(max-width:560px){
-      .page{
-        width:min(100% - 24px,var(--max));
+    footer {
+      padding: 24px 0 32px;
+      color: #4f4d48;
+      text-align: center;
+      font-size: 8px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 560px) {
+
+      .page {
+        width: min(calc(100% - 24px), var(--max));
       }
 
-      .hero{
-        padding:38px 0 45px;
+      .hero {
+        padding: 38px 0 43px;
       }
 
-      section{
-        padding:38px 0;
+      section {
+        padding: 36px 0;
       }
 
-      .framework{
-        grid-template-columns:1fr;
+      .framework {
+        grid-template-columns: 1fr;
       }
 
-      .split{
-        grid-template-columns:1fr;
+      .card {
+        min-height: auto;
       }
 
-      .inside div{
-        display:block;
+      .fit {
+        grid-template-columns: 1fr;
       }
 
-      .inside span{
-        display:block;
-        margin-top:3px;
-        text-align:left;
+      .inside div {
+        display: block;
       }
 
-      .cta{
-        width:100%;
+      .inside span {
+        display: block;
+        margin-top: 3px;
+        text-align: left;
+      }
+
+      .cta {
+        width: 100%;
       }
     }
   </style>
@@ -365,8 +403,11 @@
 
     <div class="brand">🔱 THE BRAVO</div>
 
+
     <!-- HERO -->
+
     <header class="hero">
+
       <div class="eyebrow">A practical guide</div>
 
       <h1>UNPLUGGED</h1>
@@ -377,112 +418,141 @@
 
       <h2>Stop negotiating with the habit.</h2>
 
-      <p>
-        Understand the pattern. Disconnect from it. Rebuild the standards
-        that make your next decision easier.
+      <p class="hero-copy">
+        Understand the pattern. Disconnect from it.
+        Rebuild the standards that shape your next decision.
       </p>
 
-      <a class="cta" href="CHECKOUT_URL_HERE">
+      <a
+        class="cta"
+        href="https://thebrav0.gumroad.com/l/Unplugged"
+      >
         GET UNPLUGGED
       </a>
 
       <div class="reassurance">
         Digital guide · Read at your own pace
       </div>
+
     </header>
 
 
-    <!-- PROBLEM -->
+    <!-- RECOGNITION -->
+
     <section>
+
       <div class="number">01 — RECOGNIZE IT</div>
 
       <h3>You know the cycle.</h3>
 
-      <p>
-        You make a promise. Something triggers you. You negotiate.
-        The habit wins. Then you promise yourself it will be different next time.
+      <p class="section-copy">
+        You make a promise. Something triggers you.
+        You negotiate. The habit wins.
+        Then you promise yourself it will be different next time.
       </p>
 
       <div class="problem">
+
         <div>Trigger → urge → negotiation</div>
+
         <div>Short-term relief → frustration</div>
+
         <div>Promise → repeat</div>
+
       </div>
+
     </section>
 
 
     <!-- REAL PROBLEM -->
+
     <section>
+
       <div class="number">02 — SEE IT CLEARLY</div>
 
       <h3>More willpower isn't the whole answer.</h3>
 
-      <p>
-        UNPLUGGED focuses on the pattern around the habit:
-        what triggers it, what keeps it available, how you respond,
-        and what replaces it.
+      <p class="section-copy">
+        The pattern around the habit matters:
+        what triggers it, what keeps it available,
+        how you respond, and what replaces it.
       </p>
+
     </section>
 
 
-    <!-- PRODUCT -->
+    <!-- FRAMEWORK -->
+
     <section>
-      <div class="number">03 — THE GUIDE</div>
+
+      <div class="number">03 — THE FRAMEWORK</div>
 
       <h3>Three parts. One direction.</h3>
 
-      <p>
-        The guide moves from understanding the habit to disconnecting
-        from it, then rebuilding how you use your time, attention and choices.
+      <p class="section-copy">
+        UNPLUGGED takes you from understanding the habit
+        to disconnecting from it, then rebuilding your standards.
       </p>
 
       <div class="framework">
+
         <div class="card">
           <span>PART ONE</span>
           <strong>Understand</strong>
-          <p>See the pattern before trying to change it.</p>
+          <p>
+            See the pattern before trying to change it.
+          </p>
         </div>
 
         <div class="card">
           <span>PART TWO</span>
           <strong>Disconnect</strong>
-          <p>Reduce access, interrupt the loop and handle urges.</p>
+          <p>
+            Interrupt the loop and make the old pattern harder to repeat.
+          </p>
         </div>
 
         <div class="card">
           <span>PART THREE</span>
           <strong>Rebuild</strong>
-          <p>Replace old patterns with deliberate standards.</p>
+          <p>
+            Replace old patterns with deliberate standards.
+          </p>
         </div>
+
       </div>
+
     </section>
 
 
     <!-- INSIDE -->
+
     <section>
+
       <div class="number">04 — INSIDE UNPLUGGED</div>
 
       <h3>Built to be used.</h3>
 
-      <p>
-        Not a motivational speech. A practical system you can return to
-        when things get difficult.
+      <p class="section-copy">
+        Not another speech about discipline.
+        A practical guide you can actually work through.
       </p>
 
       <div class="inside">
+
         <div>
           Trigger awareness
-          <span>Know what starts the loop.</span>
+          <span>Understand what starts the pattern.</span>
         </div>
 
         <div>
           Practical interruption
-          <span>Have a response ready.</span>
+          <span>Know what to do when the urge appears.</span>
         </div>
 
         <div>
           Environment changes
-          <span>Make the old pattern harder to repeat.</span>
+          <span>Reduce easy access to the old pattern.</span>
         </div>
 
         <div>
@@ -492,68 +562,94 @@
 
         <div>
           Return rules
-          <span>Know what to do after a bad day.</span>
+          <span>Know how to get back on track.</span>
         </div>
+
       </div>
+
     </section>
 
 
     <!-- STANDARD -->
+
     <section class="standard">
+
       <div class="number">05 — THE STANDARD</div>
 
-      <h3>Standard.<br>Not streak.</h3>
+      <h3>
+        Standard.<br>
+        Not streak.
+      </h3>
 
-      <p>
-        The goal isn't obsessing over a number.
-        It's becoming a man who keeps returning to the standard.
+      <p class="section-copy">
+        The point isn't obsessing over a number.
+        It's learning to return to the standard.
       </p>
+
     </section>
 
 
-    <!-- FIT -->
+    <!-- WHO IT'S FOR -->
+
     <section>
+
       <div class="number">06 — IS IT FOR YOU?</div>
 
       <h3>Simple answer.</h3>
 
-      <div class="split">
-        <div>
+      <div class="fit">
+
+        <div class="fit-box">
+
           <strong>For you if</strong>
+
           <p>
-            You're tired of repeating the same pattern and want
-            something practical to work through.
+            You're tired of repeating the same pattern
+            and want something practical to work through.
           </p>
+
         </div>
 
-        <div>
+        <div class="fit-box">
+
           <strong>Not for you if</strong>
+
           <p>
-            You're looking for a magic button, guaranteed results,
-            or someone to do the work for you.
+            You're looking for a magic button,
+            guaranteed results, or someone to do the work for you.
           </p>
+
         </div>
+
       </div>
+
     </section>
 
 
-    <!-- PRICE -->
+    <!-- GET THE GUIDE -->
+
     <section>
+
       <div class="number">07 — GET THE GUIDE</div>
 
       <h3>UNPLUGGED</h3>
 
-      <p>
+      <p class="section-copy">
         A practical guide for understanding the habit,
         disconnecting from the pattern and rebuilding your standard.
       </p>
 
-      <div class="price">PRICE_HERE</div>
+      <div class="price">
+        PRICE_HERE
+      </div>
+
     </section>
 
 
     <!-- FAQ -->
+
     <section>
+
       <div class="number">08 — QUESTIONS</div>
 
       <h3>Before you start.</h3>
@@ -561,56 +657,88 @@
       <div class="faq">
 
         <details>
-          <summary>What if I've tried quitting before?</summary>
+
+          <summary>
+            What if I've tried quitting before?
+          </summary>
+
           <p>
-            That's exactly why the guide focuses on understanding the pattern
-            rather than simply telling you to use more willpower.
+            That's exactly why UNPLUGGED focuses on the pattern,
+            not simply telling you to use more willpower.
           </p>
+
         </details>
 
+
         <details>
-          <summary>Is this a replacement for professional help?</summary>
+
+          <summary>
+            Is this professional treatment?
+          </summary>
+
           <p>
             No. UNPLUGGED is a self-guided educational resource.
             If you need professional support, speak with a qualified professional.
           </p>
+
         </details>
 
-        <details>
-          <summary>How should I use the guide?</summary>
-          <p>
-            Read it, work through the exercises and apply the framework
-            to your own situation instead of treating it like something
-            to simply finish.
-          </p>
-        </details>
 
         <details>
-          <summary>Does it guarantee I'll quit?</summary>
+
+          <summary>
+            How should I use the guide?
+          </summary>
+
           <p>
-            No guide can honestly guarantee that. The work still belongs to you.
+            Read it, work through the material and apply the framework
+            to your own situation.
           </p>
+
+        </details>
+
+
+        <details>
+
+          <summary>
+            Does it guarantee I'll quit?
+          </summary>
+
+          <p>
+            No. No guide can honestly guarantee that.
+            The work still belongs to you.
+          </p>
+
         </details>
 
       </div>
+
     </section>
 
 
     <!-- FINAL CTA -->
+
     <section class="final">
+
       <div class="number">START HERE</div>
 
-      <h3>Stop making the same deal with yourself.</h3>
+      <h3>
+        Stop making the same deal with yourself.
+      </h3>
 
-      <p>
+      <p class="section-copy">
         Understand it. Disconnect from it. Rebuild.
       </p>
 
-      <a class="cta" href="https://thebrav0.gumroad.com/l/Unplugged">
-  GET UNPLUGGED
+      <a
+        class="cta"
+        href="https://thebrav0.gumroad.com/l/Unplugged"
+      >
+        GET UNPLUGGED
       </a>
-      
+
     </section>
+
 
     <footer>
       🔱 THE BRAVO · RECLAIMING THE ESSENCE OF MASCULINITY
@@ -619,4 +747,4 @@
   </main>
 
 </body>
-</html>
+        </html>
